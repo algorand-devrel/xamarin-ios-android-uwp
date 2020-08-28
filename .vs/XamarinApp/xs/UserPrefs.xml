@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{3D8488E0-5101-4301-82D6-304AE6FB9D56}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="app/algorandapp/ASA.xaml.cs">
+    <Files>
+      <File FileName="app/algorandapp/MainPage.xaml" Line="1" Column="1" />
+      <File FileName="app/algorandapp/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="app/algorandapp/ASA.xaml" Line="1" Column="1" />
+      <File FileName="app/algorandapp/ASA.xaml.cs" Line="7" Column="30" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="XamarinApp" expanded="True">
+            <Node name="algorandapp" expanded="True">
+              <Node name="ASA.xaml" expanded="True">
+                <Node name="ASA.xaml.cs" selected="True" />
+              </Node>
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="algorandapp.iOS" expanded="True" />
+            <Node name="algorandapp.UWP" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.algorandapp.iOS Xamarin.HotReload.WrongLinkerErrorInfoBar.algorandapp.iOS.HideInfoBar="True" automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B829DC7D-A02F-4904-BD99-9A16D7CB3A18" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.algorandapp.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" Xamarin.HotReload.DebuggerTimeoutException.algorandapp.Android.HideInfoBar="True" PreferredExecutionTarget="Android.nexus_10_pie_9_0_-_api_28" />
+</Properties>

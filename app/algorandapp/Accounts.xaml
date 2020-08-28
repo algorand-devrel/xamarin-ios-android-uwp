@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Accounts"
+             x:Class="algorandapp.Accounts">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="20, 20, 20, 0" />
+                <On Platform="Android" Value="20, 0, 20, 0" />
+                <On Platform="UWP" Value="20, 0, 20, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout>
+        <StackLayout  HorizontalOptions="StartAndExpand">
+            <Label x:Name="NetworkLabel"
+                   Text="Network: TestNet Purestake"
+                   TextColor="Black"
+                   FontSize="Large"/>
+
+            <Button x:Name="ClearAccounts"
+                    WidthRequest="300"                   
+                    Text="Clear Device Accounts"
+                    TextColor="Blue"
+                    Clicked="ClearAccounts_Clicked" IsVisible="True">
+                <Button.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                </Button.FontSize>
+            </Button>
+        </StackLayout>
+
+        <StackLayout x:Name="StackTablet">
+            <ScrollView>
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <Button x:Name="GetBlock" Grid.Row="1" Grid.Column="0"
+                        Text="Get Block" Clicked="GetBlock_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <Button x:Name="GenerateAccount1" Grid.Row="2" Grid.Column="0"
+                    Text="Generate Account 1" Clicked="GenerateAccount1_click">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="FundsNeeded1" Grid.Row="2" Grid.Column="1"
+                    Text="Funds Needed" IsVisible="False" Clicked="FundsNeeded1_click">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GetAccount1Info" Grid.Row="2" Grid.Column="2" IsVisible="False"
+                    Text="Get Account 1 Balance" Clicked="GetAccount1Info_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <Button x:Name="GetAccount2Info" Grid.Row="3" Grid.Column="2" IsVisible="False"
+                    Text="Get Account 2 Balance" Clicked="GetAccount2Info_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GenerateAccount2" Grid.Row="3" Grid.Column="0"
+                    Text="Generate Account 2" Clicked="GenerateAccount2_Clicked" IsEnabled="False">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="FundsNeeded2" Grid.Row="3" Grid.Column="1"
+                    Text="Funds Needed" IsVisible="False" Clicked="FundsNeeded2_click">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <Button x:Name="GenerateAccount3" Grid.Row="4" Grid.Column="0"
+                    Text="Generate Account 3" Clicked="GenerateAccount3_Clicked" IsEnabled="False">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="FundsNeeded3" Grid.Row="4" Grid.Column="1"
+                    Text="Funds Needed" IsVisible="False" Clicked="FundsNeeded3_click">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GetAccount3Info" Grid.Row="4" Grid.Column="2" IsVisible="False"
+                    Text="Get Account 3 Balance" Clicked="GetAccount3Info_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <Button x:Name="Transaction" Grid.Row="5" Grid.Column="0" IsEnabled="False"
+                    Text="Transaction from Acct1 to Acct2" Clicked="Transaction_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GetTransaction" Grid.Row="5" Grid.Column="2" IsVisible="False"
+                    Text="Get Transaction" Clicked="GetTransaction_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <Button x:Name="CreateMultiSig" Grid.Row="6" Grid.Column="0" IsEnabled="False"
+                    Text="Create Multisig Address" Clicked="CreateMultiSig_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="FundsNeededMS" Grid.Row="6" Grid.Column="1"
+                    Text="Funds Needed" IsVisible="False" Clicked="FundsNeededMS_click">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GetMultiSig" Grid.Row="6" Grid.Column="2" IsVisible="False"
+                    Text="Get Multisig Balance" Clicked="GetMultiSig_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+
+                    </Button>
+
+                    <Button x:Name="MultisigTransaction" Grid.Row="7" Grid.Column="0" IsEnabled="False"
+                    Text="Send Multisig Tx to Account 3" Clicked="MultisigTransaction_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GetMultiSigTx" Grid.Row="7" Grid.Column="2" IsVisible="False"
+                    Text="Get Multisig Transaction" Clicked="GetMultiSigTx_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <!--<Label IsVisible="false" FontSize="Large" x:Name="myLabel" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3"
+                   Text="" HorizontalOptions="StartAndExpand" >
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                      iOS="30"
+                      Android="16" />
+                </Label.FontSize>
+            </Label>
+
+            <Label IsVisible="false" FontSize="Large" x:Name="myLabel2" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3"
+                   Text="" HorizontalOptions="StartAndExpand">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                      iOS="30"
+                      Android="16" />
+                </Label.FontSize>
+            </Label>
+            <Entry IsVisible="false" x:Name="Entry3" FontSize="Large" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3">
+
+            </Entry>
+            <Entry IsVisible="false" x:Name="Entry4" FontSize="Large" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="3">
+
+            </Entry>-->
+                    <WebView x:Name="myWebView" HeightRequest="500" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3">
+
+                    </WebView>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+
+        <StackLayout x:Name="StackPhone">
+            <ScrollView>
+                <StackLayout>
+                    <Button x:Name="GetBlockp" 
+                        Text="Get Block" Clicked="GetBlock_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <Button x:Name="GenerateAccount1p" 
+                    Text="Generate Account 1" Clicked="GenerateAccount1_click">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="FundsNeeded1p" 
+                    Text="Funds Needed" IsVisible="False" Clicked="FundsNeeded1_click">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GetAccount1Infop"  IsVisible="False"
+                    Text="Get Account 1 Balance" Clicked="GetAccount1Info_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <Button x:Name="GetAccount2Infop" IsVisible="False"
+                    Text="Get Account 2 Balance" Clicked="GetAccount2Info_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GenerateAccount2p" 
+                    Text="Generate Account 2" Clicked="GenerateAccount2_Clicked" IsEnabled="False">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="FundsNeeded2p" 
+                    Text="Funds Needed" IsVisible="False" Clicked="FundsNeeded2_click">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <Button x:Name="GenerateAccount3p" 
+                    Text="Generate Account 3" Clicked="GenerateAccount3_Clicked" IsEnabled="False">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="FundsNeeded3p" 
+                    Text="Funds Needed" IsVisible="False" Clicked="FundsNeeded3_click">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GetAccount3Infop"  IsVisible="False"
+                    Text="Get Account 3 Balance" Clicked="GetAccount3Info_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <Button x:Name="Transactionp"  IsEnabled="False"
+                    Text="Transaction from Acct1 to Acct2" Clicked="Transaction_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GetTransactionp"  IsVisible="False"
+                    Text="Get Transaction" Clicked="GetTransaction_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <Button x:Name="CreateMultiSigp"  IsEnabled="False"
+                    Text="Create Multisig Address" Clicked="CreateMultiSig_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="FundsNeededMSp" 
+                    Text="Funds Needed" IsVisible="False" Clicked="FundsNeededMS_click">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GetMultiSigp" IsVisible="False"
+                    Text="Get Multisig Balance" Clicked="GetMultiSig_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+
+                    </Button>
+
+                    <Button x:Name="MultisigTransactionp"  IsEnabled="False"
+                    Text="Send Multisig Tx to Account 3" Clicked="MultisigTransaction_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+                    <Button x:Name="GetMultiSigTxp" IsVisible="False"
+                    Text="Get Multisig Transaction" Clicked="GetMultiSigTx_Clicked">
+                        <Button.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                        </Button.FontSize>
+                    </Button>
+
+                    <!--<Label IsVisible="false" FontSize="Large" x:Name="myLabel" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3"
+                   Text="" HorizontalOptions="StartAndExpand" >
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                      iOS="30"
+                      Android="16" />
+                </Label.FontSize>
+            </Label>
+
+            <Label IsVisible="false" FontSize="Large" x:Name="myLabel2" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3"
+                   Text="" HorizontalOptions="StartAndExpand">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                      iOS="30"
+                      Android="16" />
+                </Label.FontSize>
+            </Label>
+            <Entry IsVisible="false" x:Name="Entry3" FontSize="Large" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3">
+
+            </Entry>
+            <Entry IsVisible="false" x:Name="Entry4" FontSize="Large" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="3">
+
+            </Entry>-->
+                    <WebView x:Name="myWebViewp" HeightRequest="500" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3">
+
+                    </WebView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+
+    </StackLayout>
+</ContentPage>

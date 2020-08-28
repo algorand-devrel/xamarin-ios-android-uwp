@@ -1,0 +1,148 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.Android/algorandapp.Android.csproj": {}
+  },
+  "projects": {
+    "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.Android/algorandapp.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.Android/algorandapp.Android.csproj",
+        "projectName": "algorandapp.Android",
+        "projectPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.Android/algorandapp.Android.csproj",
+        "packagesPath": "/Users/algorand/.nuget/packages/",
+        "outputPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.Android/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/algorand/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid90"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid90": {
+            "projectReferences": {
+              "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj": {
+                "projectPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid90": {
+          "dependencies": {
+            "Algorand": {
+              "target": "Package",
+              "version": "[0.1.2.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Xamarin.Android.Support.Core.Utils": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.3.2, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1269, )"
+            }
+          }
+        }
+      }
+    },
+    "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj",
+        "projectName": "algorandapp",
+        "projectPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj",
+        "packagesPath": "/Users/algorand/.nuget/packages/",
+        "outputPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/algorand/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Algorand": {
+              "target": "Package",
+              "version": "[0.1.2.6, )"
+            },
+            "Jurassic": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "KodeAid.Base32": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Ripple.Chaos.NaCl": {
+              "target": "Package",
+              "version": "[0.1.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.3.2, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1269, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

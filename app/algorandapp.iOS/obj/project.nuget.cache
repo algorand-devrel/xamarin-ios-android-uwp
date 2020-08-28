@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "jkTRVvtta4y8CqugRbpjtfPU0BzfBRnoSuCPbv501o4a9wQ/jot1PziLavREKDNQbzT3s71/8XYIGmab5ArTRw==",
+  "success": true,
+  "projectFilePath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.iOS/algorandapp.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/algorand/.nuget/packages/algorand/0.1.2.6/algorand.0.1.2.6.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/bouncycastle.netcore/1.8.5/bouncycastle.netcore.1.8.5.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/jurassic/3.1.0/jurassic.3.1.0.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/kodeaid.base32/1.0.2/kodeaid.base32.1.0.2.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/kodeaid.common/1.2.44/kodeaid.common.1.2.44.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/msgpack.cli/1.0.1/msgpack.cli.1.0.1.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/newtonsoft.msgpack/0.1.11/newtonsoft.msgpack.0.1.11.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/restsharp/106.6.10/restsharp.106.6.10.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/ripple.chaos.nacl/0.1.0/ripple.chaos.nacl.0.1.0.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/system.componentmodel.annotations/4.7.0/system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/system.reflection.emit.lightweight/4.3.0/system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "/Users/algorand/.nuget/packages/xamarin.forms/4.8.0.1269/xamarin.forms.4.8.0.1269.nupkg.sha512"
+  ],
+  "logs": []
+}

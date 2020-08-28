@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Node and Network Settings"
+             x:Class="algorandapp.NodeAndNetwork"
+             >
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="20, 20, 0, 0" />
+                <On Platform="Android" Value="20, 0, 0, 0" />
+                <On Platform="UWP" Value="20, 0, 0, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout >
+        <StackLayout HorizontalOptions="Center"
+                         >
+            <Label Text="TestNet" TextColor="Black"/>
+            <Switch x:Name="TestNetToggle"
+                    Toggled="Switch_Toggled_TestNet"
+                    OnColor="Orange"
+                    ThumbColor="Green"
+                    />
+            <Label Text="BetaNet" TextColor="Black"/>
+            <Switch x:Name="BetaNetToggle"
+                    Toggled="Switch_Toggled_BetaNet"
+                    OnColor="Orange"
+                    ThumbColor="Green"
+                   />
+        </StackLayout>
+        <ScrollView>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout  x:Name="BetaNetStack" Margin="20" Grid.Row="0" IsVisible="False">
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton  GroupName="BetaNet"  x:Name="PurestakeBetaNet" Grid.Row="1" Grid.Column="0"
+                 Text="Purestake BetaNet" Clicked="PurestakeBetaNet_click">
+                            <RadioButton.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                            </RadioButton.FontSize>
+                        </RadioButton>
+
+                        <Label x:Name="BetaNetPurestakeLabel" Grid.Row="1" 
+                           Text=""
+                           TextColor="Black" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton  GroupName="BetaNet"  x:Name="HackathonBetaNet" Grid.Row="2" Grid.Column="0"
+                 Text="Hackathon BetaNet" Clicked="HackathonBetaNet_click">
+                            <RadioButton.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                            </RadioButton.FontSize>
+                        </RadioButton>
+                        <Label x:Name="BetaNetHackathonLabel" Grid.Row="1" 
+                           Text=""
+                           TextColor="Black" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton  GroupName="BetaNet"  x:Name="myBetaNet" Grid.Row="3" Grid.Column="0"
+                 Text="Enter your BetaNet node" Clicked="myBetaNet_click">
+                            <RadioButton.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                            </RadioButton.FontSize>
+                        </RadioButton>
+                        <Label x:Name="BetaNetLabel" Grid.Row="1" 
+                           Text=""
+                           TextColor="Black" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout x:Name="BetaNetEntry" Grid.Row="4" IsVisible="False" >
+                        <StackLayout>
+                            <Label Text="BetaNet Server:" Margin="10"/>
+                            <Entry x:Name="EntryBetaNetServer"
+                   FontSize="Large"
+                   Grid.Column="0" >
+                            </Entry>
+                        </StackLayout >
+                        <StackLayout Margin="10">
+                            <Label Text="BetaNet Token:" />
+                            <Entry x:Name="EntryBetaNetToken"
+                       FontSize="Large"  >
+                            </Entry>
+                        </StackLayout>
+                        <Button x:Name="SaveBetaNet" 
+                 Text="Save" FontSize="Large" Clicked="SaveBetaNetwork_click">
+                        </Button>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout x:Name="TestNetStack"
+                             Margin="20" Grid.Row="0"
+                             IsVisible="True">
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton GroupName="TestNet"
+                                 x:Name="PurestakeTestNet"
+                                 Grid.Row="1" Grid.Column="0"
+                                 Text="Purestake TestNet"
+                                 TextColor="Black"                               
+                                 Clicked="PurestakeTestNet_click">
+                            <RadioButton.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                            </RadioButton.FontSize>
+                        </RadioButton>
+                        <Label x:Name="TestNetPurestakeLabel" Grid.Row="1" 
+                           Text=""
+                           TextColor="Black" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton  GroupName="TestNet"
+                                  x:Name="HackathonTestNet"
+                                  Grid.Row="2" Grid.Column="0"
+                 Text="Hackathon TestNet"
+                                  TextColor="Black"
+                                  Clicked="HackathonTestNet_click">
+                            <RadioButton.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="20" />
+                            </RadioButton.FontSize>
+                        </RadioButton>
+                        <Label x:Name="TestNetHackathonLabel" Grid.Row="1" 
+                           Text=""
+                           TextColor="Black" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton  GroupName="TestNet"
+                                  x:Name="myTestNet"
+                                  Grid.Row="3"                    
+                     Text="Enter your TestNet node"
+                                  TextColor="Black"
+                                  Clicked="myTestNet_click">
+                            <RadioButton.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="20" />
+                            </RadioButton.FontSize>
+                        </RadioButton>
+                        <Label x:Name="TestNetLabel" Grid.Row="1" 
+                           Text=""
+                           TextColor="Black" FontSize="Large"></Label>
+                    </StackLayout>
+
+                    <StackLayout x:Name="TestNetEntry" IsVisible="False" Grid.Row="4">
+                        <StackLayout Margin="10">
+                            <Label Text="TestNet Server:" />
+                            <Entry x:Name="EntryTestNetServer"
+                       FontSize="Large" >
+                            </Entry>
+                        </StackLayout >
+                        <StackLayout Margin="10">
+                            <Label Text="TestNet Token:"  />
+                            <Entry x:Name="EntryTestNetToken"
+                       FontSize="Large" >
+                            </Entry>
+                        </StackLayout>
+                        <Button x:Name="SaveTestNet" 
+                 Text="Save" FontSize="Large"
+                    Clicked="SaveTestNetwork_click">
+                        </Button>
+                    </StackLayout>
+
+                </StackLayout>
+
+                <Label FontSize="Large" x:Name="myLabel" Margin="10"
+                       Grid.Row="5" Grid.Column="0" 
+                   Text="" HorizontalOptions="StartAndExpand" >
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                    </Label.FontSize>
+                </Label>
+                <Label FontSize="Large" x:Name="myLabel2" Margin="10" Grid.Row="6" Grid.Column="0" 
+                   Text="" HorizontalOptions="StartAndExpand">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                    </Label.FontSize>
+                </Label>
+                <WebView x:Name="myWebView" HeightRequest="500" Grid.Row="7" Grid.Column="0" ></WebView>
+
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

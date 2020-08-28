@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{3D8488E0-5101-4301-82D6-304AE6FB9D56}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="app/algorandapp.iOS/Main.cs">
+    <Files>
+      <File FileName="app/algorandapp/MainPage.xaml.cs" Line="60" Column="1" />
+      <File FileName="app/algorandapp/MainPage.xaml" />
+      <File FileName="app/algorandapp/Accounts.xaml" Line="114" Column="85" />
+      <File FileName="app/algorandapp/Accounts.xaml.cs" Line="100" Column="1" />
+      <File FileName="app/algorandapp/helper.cs" Line="38" Column="43" />
+      <File FileName="app/algorandapp.iOS/Main.cs" Line="17" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AlgorandDotNetSDK" expanded="True">
+            <Node name="algorandapp" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="SdkDependencies" expanded="True" />
+              </Node>
+              <Node name="Accounts.xaml" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="algorandapp.Android" expanded="True" />
+            <Node name="algorandapp.iOS" expanded="True">
+              <Node name="Main.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.algorandapp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.57F923F3-A0AA-4371-8BFF-4434677B7387" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/algorand/Documents/Xamarin/app/algorandapp/MainPage.xaml.cs" relfile="app/algorandapp/MainPage.xaml.cs" line="104" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/Xamarin/app/algorandapp.iOS/ClipboardService.cs" relfile="app/algorandapp.iOS/ClipboardService.cs" line="14" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/Xamarin/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="100" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.algorandapp.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+</Properties>

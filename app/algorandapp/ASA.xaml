@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:algorandapp"
+             Title="ASA"
+             x:Class="algorandapp.ASA">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="20, 20, 20, 0" />
+                <On Platform="Android" Value="20, 0, 20, 0" />
+                <On Platform="UWP" Value="20, 0, 20, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+
+    <StackLayout>
+        <StackLayout  >
+            <Label FontSize="Large" TextColor="Black" x:Name="myAsset"
+              HorizontalOptions="Center" >
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                      iOS="30"
+                      Android="16" />
+                </Label.FontSize>
+            </Label>
+            <Label x:Name="NetworkLabel"
+                   Text="Network: TestNet"
+                   TextColor="Black"
+                   FontSize="Large" HorizontalOptions="Center"/>
+            <Label x:Name="Status"
+                   Text=""
+                   TextColor="Black"
+                   FontSize="Large" HorizontalOptions="Center"/>
+            <Button x:Name="ResetAsset" 
+                 Text="Reset Assets" Clicked="Reset_Clicked">
+                <Button.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                </Button.FontSize>
+
+            </Button>
+
+        </StackLayout>
+        <ScrollView>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Image x:Name="CreateAsset"
+                           Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.createasset.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="CreateAsset_click"/>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Create Asset">
+                    </Label>
+
+                </StackLayout>
+                <StackLayout x:Name="StackCongfigureManagerRole" Grid.Row="2" Grid.Column="0">
+                    <Image x:Name="CongfigureManagerRole"
+                           Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.changemanager.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="CongfigureManagerRole_click"/>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Configure Manger Role">
+                    </Label>
+                </StackLayout>
+                <StackLayout  x:Name="StackOptIn" Grid.Row="2" Grid.Column="1">
+                    <Image x:Name="OptIn"
+                           Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.optin.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="OptIn_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Opt In Account 3">
+                    </Label>
+
+                </StackLayout>
+                <StackLayout x:Name="StackTransferAsset" Grid.Row="3" Grid.Column="0">
+                    <Image x:Name="TransferAsset"
+                           Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.transferasset.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="TransferAsset_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Transfer from Account 1 to 3">
+                    </Label>
+
+                </StackLayout>
+
+                <StackLayout x:Name="StackFreezeAsset"  Grid.Row="3" Grid.Column="1">
+                    <Image x:Name="FreezeAsset"
+                           Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.freeze.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="FreezeAsset_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Freeze Account 3">
+                    </Label>
+
+                </StackLayout  >
+                <StackLayout x:Name="StackRevokeAsset" Grid.Row="4" Grid.Column="0">
+                    <Image x:Name="RevokeAsset"
+                           Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.revoke.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="RevokeAsset_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Revoke on Account 3">
+                    </Label>
+
+                </StackLayout>
+                <StackLayout x:Name="StackDestroyAsset" Grid.Row="4" Grid.Column="1">
+                    <Image x:Name="DestroyAsset"
+                           Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.destroy.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="DestroyAsset_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Destroy on Account 1">
+                    </Label>
+
+
+                </StackLayout>
+
+                <WebView x:Name="myWebView" HeightRequest="500" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+
+                </WebView>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Atomic Transfers"
+             xmlns:local="clr-namespace:algorandapp"
+             x:Class="algorandapp.AtomicTransfers">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="20, 20, 20, 0" />
+                <On Platform="Android" Value="20, 0, 20, 0" />
+                <On Platform="UWP" Value="20, 0, 20, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <StackLayout>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" >
+                <Label x:Name="NetworkLabel"
+                   Text="Network: TestNet"
+                       TextColor="Black"
+                   FontSize="Large"/>
+            </StackLayout>
+            <Button x:Name="ResetAtomicTransfers" 
+                 Text="Reset Atomic Transfers" Clicked="Reset_Clicked">
+                <Button.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                </Button.FontSize>
+            </Button>
+        </StackLayout>
+        <ScrollView>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+       
+                </Grid.ColumnDefinitions>
+
+                <StackLayout x:Name="StackAtomicTransfers" Grid.Row="0" Grid.Column="0">
+                    <Image x:Name="AtomicTransfer" Grid.Row="1"  Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.homeatomictransfers.jpg}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="AtomicTransfer_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Grid.Row="3" 
+                    VerticalOptions="Center" FontSize="Medium"
+                    HorizontalTextAlignment="Start"
+                    TextColor="Blue" Text="Account 1 to both A2 and A3">
+                    </Label>
+
+                </StackLayout>
+
+                <Button x:Name="AtomicTransferInfo" IsEnabled="False" Grid.Row="4" Grid.Column="0"
+                 Text="Get Atomic Transfer Info" Clicked="AtomicTransferInfo_Clicked">
+                    <Button.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                    </Button.FontSize>
+
+                </Button>
+
+                <WebView x:Name="myWebView" HeightRequest="500" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+
+                </WebView>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

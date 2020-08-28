@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:algorandapp"
+             x:Class="algorandapp.ASC"
+             Title="ASC1">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="20, 20, 20, 0" />
+                <On Platform="Android" Value="20, 0, 20, 0" />
+                <On Platform="UWP" Value="20, 0, 20, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+
+    <StackLayout>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" >
+                <Label x:Name="NetworkLabel"
+                   Text="Network: TestNet"
+                       TextColor="Black"
+                   FontSize="Medium"/>
+            </StackLayout>
+
+        </StackLayout>
+        <ScrollView>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout x:Name="StackASCContractAccount" Grid.Row="0" Grid.Column="0">
+                    <Image x:Name="ASCContractAccount"  Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.contractaccount.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="ASCContractAccount_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="ASC1 Contract Account">
+                    </Label>
+
+                </StackLayout>
+
+                <StackLayout x:Name="StackASCAccountDelegation" Grid.Row="0" Grid.Column="1">
+                    <Image x:Name="ASCAccountDelegation"  Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.accountdelegation.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="ASCAccountDelegation_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="ASC1 Account Delegation">
+                    </Label>
+
+                </StackLayout>
+
+                <WebView x:Name="myWebView" HeightRequest="500" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+
+                </WebView>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+
+
+</ContentPage>

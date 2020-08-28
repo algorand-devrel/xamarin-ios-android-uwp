@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:algorandapp"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Title="Algorand Sample .NET SDK/Xamarin"
+             mc:Ignorable="d" x:Class="algorandapp.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="20, 20, 20, 0" />
+                <On Platform="Android" Value="20, 0, 20, 0" />
+                <On Platform="UWP" Value="20, 0, 20, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <StackLayout>
+        <StackLayout>
+            <Label FontSize="Large" x:Name="myLabel"
+              Text="Welcome to Algorand C# SDK"
+                   TextColor="Black"
+                   HorizontalOptions="Center" >
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                </Label.FontSize>
+            </Label>
+            <Label x:Name="NetworkLabel"
+                   Text="Network: TestNet"
+                   FontSize="Medium"
+                   TextColor="Black"
+                   HorizontalOptions="Center"/>
+            <Button x:Name="ResetAsset" 
+                 Text="Reset to Defaults" Clicked="Reset_Clicked">
+                <Button.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                      iOS="20"
+                      Android="12" />
+                </Button.FontSize>
+
+            </Button>
+        </StackLayout>
+        <ScrollView>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Image x:Name="NodeNetwork"
+                               Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.homenodenetworksettings.jpg}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="NodeNetwork_click"/>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Node and Network Settings">
+                    </Label>
+
+                </StackLayout>
+
+                <StackLayout x:Name="StackGenerateAccount"
+                                 Grid.Row="2" Grid.Column="0">
+                    <Image x:Name="GenerateAccount"
+                               Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.homeaccountstransfers.jpg}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="GenerateAccount_click"/>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Accounts and Transactions">
+                    </Label>
+                </StackLayout>
+ 
+                <StackLayout  x:Name="StackASA" Grid.Row="2" Grid.Column="1">
+                    <Image x:Name="ASA" Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.homeasa.jpg}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="ASA_click"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Algorand Standard Assets">
+                    </Label>
+                </StackLayout>
+
+
+                <StackLayout x:Name="StackAtomicTransfers" Grid.Row="3" Grid.Column="0">
+                    <Image x:Name="AtomicTransfers"  Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.homeatomictransfers.jpg}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="AtomicTransfers_click"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Atomic Transfers">
+                    </Label>
+
+                </StackLayout>
+
+
+                <StackLayout x:Name="StackASC1"  Grid.Row="3" Grid.Column="1">
+                    <Image x:Name="ASC1"  Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.homeasclayer1.jpg}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="ASC1_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Algorand Smart Contract Layer 1">
+                    </Label>
+
+                </StackLayout  >
+
+            </Grid>
+
+        </ScrollView>
+    </StackLayout>
+
+
+</ContentPage>
