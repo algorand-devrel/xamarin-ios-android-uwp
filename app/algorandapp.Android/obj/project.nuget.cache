@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D2C/AJZudpWLSGGQYqNqQ0mrXehB8gdKQ3b6EOK0jBZHcasq8S4tMBTAFUNEm55bqYJBBOC2XjM+iGZNZCAPmQ==",
+  "dgSpecHash": "v5362GKTrsbVo2xkt6C4K0ryf7JRY9oKngWuAUmQcPlBC4XjXT6s/8rT4TNnazs3J3lj86HzJwxuzkIo5pnxZA==",
   "success": true,
-  "projectFilePath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.Android/algorandapp.Android.csproj",
+  "projectFilePath": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.Android/algorandapp.Android.csproj",
   "expectedPackageFiles": [
     "/Users/algorand/.nuget/packages/algorand/0.1.2.6/algorand.0.1.2.6.nupkg.sha512",
     "/Users/algorand/.nuget/packages/bouncycastle.netcore/1.8.5/bouncycastle.netcore.1.8.5.nupkg.sha512",

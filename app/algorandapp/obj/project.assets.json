@@ -1864,11 +1864,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj",
+      "projectUniqueName": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/algorandapp.csproj",
       "projectName": "algorandapp",
-      "projectPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj",
+      "projectPath": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/algorandapp.csproj",
       "packagesPath": "/Users/algorand/.nuget/packages/",
-      "outputPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/obj/",
+      "outputPath": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

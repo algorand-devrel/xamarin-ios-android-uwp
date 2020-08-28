@@ -1,0 +1,71 @@
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/algorandapp.iOS.csprojAssemblyReference.cache
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/algorandapp.iOS.csproj.CoreCompileInputs.cache
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/algorandapp.iOS.exe
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/algorandapp.iOS.pdb
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Algorand.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/BouncyCastle.Crypto.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Jurassic.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Jurassic.pdb
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/KodeAid.Base32.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/KodeAid.Common.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/MsgPack.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Msgpack.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Msgpack.pdb
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/RestSharp.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Chaos.NaCl.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.pdb
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.pdb
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/ar/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/ca/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/cs/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/da/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/de/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/el/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/es/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/fi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/fr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/he/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/hi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/hr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/hu/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/id/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/it/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/ja/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/ko/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/ms/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/nb/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/nl/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/pl/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/pt/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/ro/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/ru/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/sk/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/sv/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/th/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/tr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/uk/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/vi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/algorandapp.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/algorandapp.pdb
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.pdb
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad pro (12.9-inch) (4th generation)-13.6/ibtool/_BundleResourceWithLogicalName.items
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad pro (12.9-inch) (4th generation)-13.6/actool/_PartialAppManifest.items
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad pro (12.9-inch) (4th generation)-13.6/actool/_BundleResourceWithLogicalName.items
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad pro (12.9-inch) (4th generation)-13.6/coremlc/_PartialAppManifest.items
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad pro (12.9-inch) (4th generation)-13.6/coremlc/_BundleResourceWithLogicalName.items
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad pro (12.9-inch) (4th generation)-13.6/optimized/
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/XamlC.stamp
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/algorandapp.iOS.csproj.CopyComplete
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/algorandapp.iOS.exe
+/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/iPhoneSimulator/Debug/algorandapp.iOS.pdb

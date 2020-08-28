@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.iOS/algorandapp.iOS.csproj": {}
+    "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/algorandapp.iOS.csproj": {}
   },
   "projects": {
-    "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.iOS/algorandapp.iOS.csproj": {
+    "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/algorandapp.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.iOS/algorandapp.iOS.csproj",
+        "projectUniqueName": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/algorandapp.iOS.csproj",
         "projectName": "algorandapp.iOS",
-        "projectPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.iOS/algorandapp.iOS.csproj",
+        "projectPath": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/algorandapp.iOS.csproj",
         "packagesPath": "/Users/algorand/.nuget/packages/",
-        "outputPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp.iOS/obj/",
+        "outputPath": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp.iOS/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -26,8 +26,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj": {
-                "projectPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj"
+              "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/algorandapp.csproj": {
+                "projectPath": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/algorandapp.csproj"
               }
             }
           }
@@ -67,14 +67,14 @@
         }
       }
     },
-    "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj": {
+    "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/algorandapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj",
+        "projectUniqueName": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/algorandapp.csproj",
         "projectName": "algorandapp",
-        "projectPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/algorandapp.csproj",
+        "projectPath": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/algorandapp.csproj",
         "packagesPath": "/Users/algorand/.nuget/packages/",
-        "outputPath": "/Users/algorand/Documents/GitHub/rfustino/hackathon/algorandsamples/v1/csharpdemo/XamarinApp/app/algorandapp/obj/",
+        "outputPath": "/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
