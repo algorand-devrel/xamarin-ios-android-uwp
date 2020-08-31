@@ -67,9 +67,9 @@ namespace algorandapp
             }
             // format and send logic sig
             // int 1, returns true
-            byte[] program = { 0x01, 0x20, 0x01, 0x01, 0x22 };
+            // byte[] program = { 0x01, 0x20, 0x01, 0x01, 0x22 };
             // int 0, returns false, so rawTransaction will fail below
-            // byte[] program = { 0x01, 0x20, 0x01, 0x00, 0x22 };
+            byte[] program = { 0x01, 0x20, 0x01, 0x00, 0x22 };
             LogicsigSignature lsig = new LogicsigSignature(program, null);
             Console.WriteLine("Escrow address: " + lsig.ToAddress().ToString());
             Algorand.Transaction tx = Utils.GetLogicSignatureTransaction(lsig, account1.Address, transParams, "logic sig message");
@@ -130,9 +130,9 @@ namespace algorandapp
             }
             // format and send logic sig
             // int 1, returns true
-            byte[] program = { 0x01, 0x20, 0x01, 0x01, 0x22 };
+            // byte[] program = { 0x01, 0x20, 0x01, 0x01, 0x22 };
             // int 0, returns false, so rawTransaction will fail below
-            // byte[] program = { 0x01, 0x20, 0x01, 0x00, 0x22 };
+            byte[] program = { 0x01, 0x20, 0x01, 0x00, 0x22 };
 
             LogicsigSignature lsig = new LogicsigSignature(program, null);
 

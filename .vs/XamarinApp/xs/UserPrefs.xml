@@ -1,30 +1,34 @@
-﻿<Properties StartupConfiguration="{CAD279A1-993F-456F-A200-7113A44E9E13}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="app/algorandapp/helper.cs">
+﻿<Properties StartupConfiguration="{3D8488E0-5101-4301-82D6-304AE6FB9D56}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="app/algorandapp/ASC.xaml.cs">
     <Files>
       <File FileName="app/algorandapp/MainPage.xaml" Line="1" Column="1" />
       <File FileName="app/algorandapp/MainPage.xaml.cs" />
       <File FileName="app/algorandapp/ASA.xaml" />
       <File FileName="app/algorandapp/ASA.xaml.cs" />
-      <File FileName="app/algorandapp/helper.cs" Line="80" Column="37" />
+      <File FileName="app/algorandapp/helper.cs" />
+      <File FileName="app/algorandapp.iOS/Main.cs" />
+      <File FileName="app/algorandapp/ASC.xaml.cs" Line="133" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="XamarinApp" expanded="True">
-            <Node name="algorandapp" expanded="True" />
-            <Node name="algorandapp.iOS" expanded="True" selected="True" />
+            <Node name="algorandapp" expanded="True">
+              <Node name="ASA.xaml" expanded="True" />
+              <Node name="ASC.xaml" expanded="True">
+                <Node name="ASC.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="algorandapp.iOS" expanded="True" />
             <Node name="algorandapp.UWP" expanded="True" />
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.algorandapp.iOS Xamarin.HotReload.WrongLinkerErrorInfoBar.algorandapp.iOS.HideInfoBar="True" automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B829DC7D-A02F-4904-BD99-9A16D7CB3A18" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
