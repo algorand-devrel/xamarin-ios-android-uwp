@@ -49,7 +49,7 @@
                 <StackLayout  x:Name="BetaNetStack" Margin="20" Grid.Row="0" IsVisible="False">
                     <StackLayout Orientation="Horizontal">
                         <RadioButton  GroupName="BetaNet"  x:Name="PurestakeBetaNet" Grid.Row="1" Grid.Column="0"
-                 Text="Purestake BetaNet" Clicked="PurestakeBetaNet_click">
+                 Content="Purestake BetaNet" CheckedChanged="PurestakeBetaNet_click">
                             <RadioButton.FontSize>
                                 <OnPlatform x:TypeArguments="x:Double"
                       iOS="20"
@@ -63,7 +63,7 @@
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <RadioButton  GroupName="BetaNet"  x:Name="HackathonBetaNet" Grid.Row="2" Grid.Column="0"
-                 Text="Hackathon BetaNet" Clicked="HackathonBetaNet_click">
+                 Content="Hackathon BetaNet" CheckedChanged="HackathonBetaNet_click">
                             <RadioButton.FontSize>
                                 <OnPlatform x:TypeArguments="x:Double"
                       iOS="20"
@@ -76,7 +76,7 @@
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <RadioButton  GroupName="BetaNet"  x:Name="myBetaNet" Grid.Row="3" Grid.Column="0"
-                 Text="Enter your BetaNet node" Clicked="myBetaNet_click">
+                 Content="Enter your BetaNet node" CheckedChanged="myBetaNet_click">
                             <RadioButton.FontSize>
                                 <OnPlatform x:TypeArguments="x:Double"
                       iOS="20"
@@ -113,9 +113,9 @@
                         <RadioButton GroupName="TestNet"
                                  x:Name="PurestakeTestNet"
                                  Grid.Row="1" Grid.Column="0"
-                                 Text="Purestake TestNet"
+                                 Content="Purestake TestNet"
                                  TextColor="Black"                               
-                                 Clicked="PurestakeTestNet_click">
+                                 CheckedChanged="PurestakeTestNet_click">
                             <RadioButton.FontSize>
                                 <OnPlatform x:TypeArguments="x:Double"
                       iOS="20"
@@ -130,9 +130,9 @@
                         <RadioButton  GroupName="TestNet"
                                   x:Name="HackathonTestNet"
                                   Grid.Row="2" Grid.Column="0"
-                 Text="Hackathon TestNet"
+                 Content="Hackathon TestNet"
                                   TextColor="Black"
-                                  Clicked="HackathonTestNet_click">
+                                  CheckedChanged="HackathonTestNet_click">
                             <RadioButton.FontSize>
                                 <OnPlatform x:TypeArguments="x:Double"
                       iOS="20"
@@ -147,9 +147,9 @@
                         <RadioButton  GroupName="TestNet"
                                   x:Name="myTestNet"
                                   Grid.Row="3"                    
-                     Text="Enter your TestNet node"
+                     Content="Enter your TestNet node"
                                   TextColor="Black"
-                                  Clicked="myTestNet_click">
+                                  CheckedChanged="myTestNet_click">
                             <RadioButton.FontSize>
                                 <OnPlatform x:TypeArguments="x:Double"
                       iOS="20"

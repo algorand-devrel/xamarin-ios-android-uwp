@@ -62,16 +62,16 @@ namespace algorandapp
                 TestNetPurestakeLabel.Text = "Purestake TestNet";
                 TestNetHackathonLabel.Text = "Hackathon TestNet";
                 TestNetLabel.Text = "Enter your TestNet node";
-                PurestakeTestNet.Text = "";
-                HackathonTestNet.Text = "";
-                myTestNet.Text = "";
+                PurestakeTestNet.Content = "";
+                HackathonTestNet.Content = "";
+                myTestNet.Content = "";
 
                 BetaNetPurestakeLabel.Text = "Purestake BetaNet";
                 BetaNetHackathonLabel.Text = "Hackathon BetaNet";
                 BetaNetLabel.Text = "Enter your BetaNet node";
-                PurestakeBetaNet.Text = "";
-                HackathonBetaNet.Text = "";
-                myBetaNet.Text = "";
+                PurestakeBetaNet.Content = "";
+                HackathonBetaNet.Content = "";
+                myBetaNet.Content = "";
 
             }
             else
@@ -79,16 +79,16 @@ namespace algorandapp
                 TestNetPurestakeLabel.Text = "";
                 TestNetHackathonLabel.Text = "";
                 TestNetLabel.Text = "";
-                PurestakeTestNet.Text = "Purestake TestNet";
-                HackathonTestNet.Text = "Hackathon TestNet";
-                myTestNet.Text = "Enter your TestNet node";
+                PurestakeTestNet.Content = "Purestake TestNet";
+                HackathonTestNet.Content = "Hackathon TestNet";
+                myTestNet.Content = "Enter your TestNet node";
 
                 BetaNetPurestakeLabel.Text = "";
                 BetaNetHackathonLabel.Text = "";
                 BetaNetLabel.Text = "";
-                PurestakeBetaNet.Text = "Purestake BetaNet";
-                HackathonBetaNet.Text = "Hackathon BetaNet";
-                myBetaNet.Text = "Enter your BetaNet node";
+                PurestakeBetaNet.Content = "Purestake BetaNet";
+                HackathonBetaNet.Content = "Hackathon BetaNet";
+                myBetaNet.Content = "Enter your BetaNet node";
             }
 
             //HackathonTestNet.TextColor = Color.Blue;
