@@ -78,36 +78,96 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTuners 1024x2024.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\167x167.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152x152.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76x76.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x40.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x40-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180x180.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120x120.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120x120-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x40-2.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120x120-2.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180x180-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTuners 512x512.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTuners 512x512-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTuners 1024x2024-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60x60.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58x58.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87x87.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80x80.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\20x20.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29x29.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58x58-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80x80-1.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS 1080x1920.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS-2160x3840.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS 1080x1920-1.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS-2160x3840-1.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS 1080x1920-2.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS-2160x3840-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTuners 1024x2024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\167x167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152x152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76x76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x40-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180x180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120x120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120x120-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x40-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120x120-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180x180-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTuners 512x512.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTuners 512x512-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTuners 1024x2024-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60x60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58x58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87x87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80x80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\20x20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29x29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58x58-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80x80-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS 1080x1920.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS-2160x3840.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS 1080x1920-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS-2160x3840-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS 1080x1920-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchScreens.imageset\Splash Screen for iOS-2160x3840-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
@@ -120,7 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1-preview1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
     <PackageReference Include="Algorand">
       <Version>0.1.2.6</Version>
     </PackageReference>
@@ -138,8 +198,6 @@
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets.xcassets\LaunchScreens.imageset\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

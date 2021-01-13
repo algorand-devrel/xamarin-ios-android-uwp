@@ -9,7 +9,7 @@ namespace algorandapp
         public App()
         {
             InitializeComponent();
-            Device.SetFlags(new string[] { "RadioButton_Experimental" });
+            //Device.SetFlags(new string[] { "RadioButton_Experimental" });
             MainPage = new NavigationPage(new MainPage());
             //MainPage = new AppShell();
 

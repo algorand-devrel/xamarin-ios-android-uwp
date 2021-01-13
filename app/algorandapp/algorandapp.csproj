@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1-preview1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
     <PackageReference Include="Ripple.Chaos.NaCl" Version="0.1.0" />
     <PackageReference Include="Jurassic" Version="3.1.0" />
     <PackageReference Include="KodeAid.Base32" Version="1.0.2" />
