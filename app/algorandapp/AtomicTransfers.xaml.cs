@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using Algorand;
-using Algorand.Algod.Client;
-using Algorand.Algod.Client.Api;
-using Algorand.Algod.Client.Model;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+
+
+using Algorand;
+using Algorand.V2;
+using Algorand.Client;
 using Account = Algorand.Account;
+
+
 
 namespace algorandapp
 {
@@ -65,7 +68,7 @@ namespace algorandapp
             //var transParams = algodApiInstance.TransactionParams();
             AtomicTransfer.Opacity = .2;
             StackAtomicTransfers.IsEnabled = false;
-            TransactionParams transParams = null;
+            Algorand.V2.Model.TransactionParametersResponse transParams = null;
             AtomicTransfer.IsEnabled = false;
 
             try

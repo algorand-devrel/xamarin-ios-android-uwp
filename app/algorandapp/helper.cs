@@ -1,10 +1,15 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Essentials;
-using Account = Algorand.Account;
+
 using System.Threading.Tasks;
 using System.Diagnostics;
-using Algorand.Algod.Client.Api;
+
+
+
+using Algorand.V2;
+using Account = Algorand.Account;
+
 
 
 // Purestake 
@@ -143,11 +148,11 @@ namespace algorandapp
             {
                 if (!(String.IsNullOrEmpty(myaddress)))
                 {
-                    Algorand.Algod.Client.Model.Account accountinfo = await algodApiInstance.AccountInformationAsync(myaddress);
+                    Algorand.V2.Model.Account accountinfo = algodApiInstance.AccountInformation(myaddress);
 
                     if (accountinfo != null)
                     {
-                        return accountinfo.Amount;
+                        return (ulong?)accountinfo.Amount;
                     }
                 }
             }

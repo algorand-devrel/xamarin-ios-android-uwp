@@ -6,18 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-
+ 
 using Algorand;
+using Algorand.V2;
+using Algorand.Client;
+using Algorand.V2.Model;
 using Account = Algorand.Account;
-using Algorand.Algod.Client.Api;
-using Algorand.Algod.Client.Model;
-using Algorand.Algod.Client;
 using Transaction = Algorand.Transaction;
 
 using Org.BouncyCastle.Crypto.Parameters;
 using System.IO;
 using Xamarin.Essentials;
 using System.Numerics;
+
 
 namespace algorandapp
 {
@@ -516,8 +517,7 @@ namespace algorandapp
             //restore account from mnemonic
             account = new Account(mnemonic);
 
-
-            Algorand.Algod.Client.Model.Account accountinfo = await algodApiInstance.AccountInformationAsync(account.Address.ToString());
+            Algorand.V2.Model.Account accountinfo = algodApiInstance.AccountInformation(account.Address.ToString());
 
             Debug.WriteLine("accountinfo: " + accountinfo);
 
@@ -535,7 +535,7 @@ namespace algorandapp
         {
             var status = await algodApiInstance.GetStatusAsync();
             long lastround = (long)status.LastRound;
-            Block block;
+            BlockResponse block;
             try
             {
                 block = await algodApiInstance.GetBlockAsync(lastround);
@@ -653,7 +653,7 @@ namespace algorandapp
             Account account3 = accounts[2];
             HtmlWebViewSource htmlSource;
             // transfer from Account 1 to 2
-            TransactionParams transParams = null;
+            TransactionParametersResponse transParams = null;
             try
             {
                 transParams = algodApiInstance.TransactionParams();
@@ -666,7 +666,7 @@ namespace algorandapp
             var tx = Utils.GetPaymentTransaction(account1.Address, account2.Address, amount, "pay message", transParams);           
             var signedTx = account1.SignTransaction(tx);
             Console.WriteLine("Signed transaction with txid: " + signedTx.transactionID);
-            TransactionID id = null;
+            PostTransactionsResponse id = null;
             string wait = "";
             // send the transaction to the network
             try
@@ -674,7 +674,9 @@ namespace algorandapp
                 id = Utils.SubmitTransaction(algodApiInstance, signedTx);
                 Console.WriteLine("Successfully sent tx with id: " + id.TxId);
                 wait = Utils.WaitTransactionToComplete(algodApiInstance, id.TxId);
+
                 Console.WriteLine(wait);
+                await DisplayAccount(helper.StorageAccountName2);
             }
             catch (ApiException err)
             {
@@ -713,14 +715,13 @@ namespace algorandapp
 
             buttonstate();
 
-            await DisplayAccount(helper.StorageAccountName2);
 
             var mytx = await SecureStorage.GetAsync(helper.StorageTransaction);
             if (!(mytx == null || mytx == ""))
 
             {
-                Algorand.Algod.Client.Model.Account accountinfo =
-                await algodApiInstance.AccountInformationAsync(account2.Address.ToString());
+                Algorand.V2.Model.Account accountinfo =
+                algodApiInstance.AccountInformation(account2.Address.ToString());
 
                 Debug.WriteLine("Account 2 info: " + accountinfo);
                 htmlSource = new HtmlWebViewSource();
@@ -732,6 +733,10 @@ namespace algorandapp
                 myWebView.Source = htmlSource;
                 myWebViewp.Source = htmlSource;
             }
+            await DisplayAccount(helper.StorageAccountName2);
+
+
+
 
         }
 
@@ -816,13 +821,14 @@ namespace algorandapp
             SignedTransaction completeTx = account2.AppendMultisigTransaction(msig, signedTx);
 
             // send the transaction to the network
-            TransactionID id = null;
+            PostTransactionsResponse id = null;
             try
             {
                 id = Utils.SubmitTransaction(algodApiInstance, completeTx);
-                Console.WriteLine("Successfully sent tx with id: " + id);
+                Console.WriteLine("Successfully sent tx with id: " + id.TxId);
                 var x = Utils.WaitTransactionToComplete(algodApiInstance, id.TxId);
                 Console.WriteLine(x);
+
             }
             catch (ApiException err)
             {

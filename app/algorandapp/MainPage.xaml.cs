@@ -7,12 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-using Algorand;
 using Account = Algorand.Account;
-using Algorand.Algod.Client.Api;
-using Algorand.Algod.Client.Model;
-using Algorand.Algod.Client;
-using Transaction = Algorand.Transaction;
+
 
 using Org.BouncyCastle.Crypto.Parameters;
 using System.IO;

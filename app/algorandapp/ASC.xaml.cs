@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using Algorand;
-using Account = Algorand.Account;
-using Algorand.Algod.Client.Api;
-using Algorand.Algod.Client.Model;
+
 using Xamarin.Essentials;
-using Algorand.Algod.Client;
+
 using Xamarin.Forms;
+
+using Algorand;
+using Algorand.V2;
+using Algorand.Client;
+using Account = Algorand.Account;
 
 
 namespace algorandapp
@@ -56,7 +58,7 @@ namespace algorandapp
             StackASCContractAccount.IsEnabled = false;
             ASCContractAccount.Opacity = .2;
             ASCContractAccount.IsEnabled = false;
-            Algorand.Algod.Client.Model.TransactionParams transParams = null;
+            Algorand.V2.Model.TransactionParametersResponse transParams = null;
             try
             {
                 transParams = algodApiInstance.TransactionParams();
@@ -69,10 +71,13 @@ namespace algorandapp
             // int 1, returns true
             // byte[] program = { 0x01, 0x20, 0x01, 0x01, 0x22 };
             // int 0, returns false, so rawTransaction will fail below
+            // byte[] program = Convert.FromBase64String("ASABASI=");
             byte[] program = { 0x01, 0x20, 0x01, 0x00, 0x22 };
             LogicsigSignature lsig = new LogicsigSignature(program, null);
             Console.WriteLine("Escrow address: " + lsig.ToAddress().ToString());
-            Algorand.Transaction tx = Utils.GetLogicSignatureTransaction(lsig, account1.Address, transParams, "logic sig message");
+            var tx = Utils.GetPaymentTransaction(lsig.Address, account1.Address, 100000, "draw algo from contract", transParams);
+
+          //  Algorand.Transaction tx = Utils.GetLogicSignatureTransaction(lsig, account1.Address, transParams, "logic sig message");
             if (!lsig.Verify(tx.sender))
             {
                 string msg = "Verification failed";
@@ -119,7 +124,7 @@ namespace algorandapp
             ASCAccountDelegation.Opacity = .2;
             StackASCAccountDelegation.IsEnabled = false;
             ASCAccountDelegation.IsEnabled = false;
-            Algorand.Algod.Client.Model.TransactionParams transParams = null;
+            Algorand.V2.Model.TransactionParametersResponse transParams = null;
             try
             {
                 transParams = algodApiInstance.TransactionParams();
@@ -140,18 +145,21 @@ namespace algorandapp
             account1.SignLogicsig(lsig);
 
             Console.WriteLine("Escrow address: " + lsig.ToAddress().ToString());
-            Algorand.Transaction tx = Utils.GetLogicSignatureTransaction(account1.Address, account2.Address, transParams, "logic sig message");
+            Transaction tx = Utils.GetPaymentTransaction(new Address(account1.Address.ToString()), new Address(account2.Address.ToString()), 1000000,
+    "draw algo with logic signature", transParams);
+          //  Algorand.Transaction tx = Utils.GetLogicSignatureTransaction(account1.Address, account2.Address, transParams, "logic sig message");
             try
             {
-                SignedTransaction stx = Account.SignLogicsigDelegatedTransaction(lsig, tx);
+                SignedTransaction stx = Account.SignLogicsigTransaction(lsig, tx);
                 byte[] encodedTxBytes = Encoder.EncodeToMsgPack(stx);
                 // int 0 is the teal program, which returns false, 
                 // so rawTransaction will fail below   
 
-                var id = algodApiInstance.RawTransaction(encodedTxBytes);
-                Console.WriteLine("Successfully sent tx logic sig tx id: " + id);
+                var id = Utils.SubmitTransaction(algodApiInstance, stx);
+
                 var wait = Utils.WaitTransactionToComplete(algodApiInstance, id.TxId);
                 Console.WriteLine(wait);
+                Console.WriteLine("Successfully sent tx logic sig tx id: " + id);
                 var htmlSource = new HtmlWebViewSource();
                 htmlSource.Html = @"<html><body>" +
 "<h3>" + "Successfully sent tx logic sig tx: " + wait + "</h3>" +

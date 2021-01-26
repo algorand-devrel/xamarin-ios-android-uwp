@@ -7,12 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+
 using Algorand;
+using Algorand.V2;
+using Algorand.V2.Model;
 using Account = Algorand.Account;
-using Algorand.Algod.Client.Api;
-using Algorand.Algod.Client.Model;
-using Algorand.Algod.Client;
-using Transaction = Algorand.Transaction;
+
 
 using Org.BouncyCastle.Crypto.Parameters;
 using System.IO;
@@ -37,7 +37,8 @@ namespace algorandapp
         public static helper helper = new helper();
 
         public string network = "";
-        public ulong? assetID = 0;
+        //public ulong? assetID = 0;
+        public long? assetID = 0;
 
         public ASA()
         {
@@ -79,10 +80,13 @@ namespace algorandapp
             Status.Text = "";
             NetworkLabel.Text = "Network: " + network;
             var AssetID = await SecureStorage.GetAsync(helper.StorageAssetIDName);
-            if (!String.IsNullOrEmpty(AssetID))
+            if (!String.IsNullOrEmpty(AssetID) )
             {
+                if (AssetID != " ")
+                { 
                 myAsset.Text = "Asset ID = " + AssetID;
-                assetID = Convert.ToUInt64(AssetID);
+                assetID = (long?)Convert.ToUInt64(AssetID);
+                }
             }
 
 
@@ -269,12 +273,11 @@ namespace algorandapp
             // Create the Asset
             // Total number of this asset available for circulation = 10000
 
-            var ap = new AssetParams(creator: account1.Address.ToString(), assetname: "latikum22",
-                unitname: "LAT", defaultfrozen: false, total: 10000,
-                url: "http://this.test.com", metadatahash: Convert.ToBase64String(
-                    Encoding.ASCII.GetBytes("16efaa3924a6fd9d3a4880099a4ac65d")))
+            var ap = new AssetParams(creator: account1.Address.ToString(), name: "latikum22",
+                unitName: "LAT", defaultFrozen: false, total: 10000,
+                decimals: 0, url: "http://this.test.com", metadataHash: Encoding.ASCII.GetBytes("16efaa3924a6fd9d3a4880099a4ac65d"))
             {
-                Managerkey = account2.Address.ToString()
+                Manager = account2.Address.ToString()
             };
 
             // Specified address can change reserve, freeze, clawback, and manager
@@ -286,22 +289,25 @@ namespace algorandapp
             SignedTransaction signedTx = account1.SignTransaction(tx);
             // send the transaction to the network and
             // wait for the transaction to be confirmed
-
+          
             try
             {
-                TransactionID id = Utils.SubmitTransaction(algodApiInstance, signedTx);
-                Console.WriteLine("Transaction ID: " + id);
+                PostTransactionsResponse id = Utils.SubmitTransaction(algodApiInstance, signedTx);
+                Console.WriteLine("Transaction ID: " + id.TxId);
                 Console.WriteLine(Utils.WaitTransactionToComplete(algodApiInstance, id.TxId));
                 // Now that the transaction is confirmed we can get the assetID
-                Algorand.Algod.Client.Model.Transaction ptx = algodApiInstance.PendingTransactionInformation(id.TxId);
-                assetID = ptx.Txresults.Createdasset;
+                var ptx = algodApiInstance.PendingTransactionInformation(id.TxId);
+                assetID = ptx.AssetIndex;
+
+
                 var assetIDstr = assetID.ToString();
                 await SecureStorage.SetAsync(helper.StorageAssetIDName, assetIDstr);
    
                 await SecureStorage.SetAsync(helper.StorageLastASAButton, "create");
                 buttonstate("create");
                 CreateAsset.Opacity = 1;
-                var act = algodApiInstance.AssetInformation((long?)assetID).ToJson();
+                var act = algodApiInstance.GetAssetByID(assetID).ToJson();
+             //   var act = algodApiInstance.AssetInformation((long?)assetID).ToJson();
 
                 htmlSource.Html = @"<html><body><h3>" + "AssetID = " + assetID.ToString() + "</h3>" +
                     "<h3>" + "Asset Info = " + act.ToString() + "</h3>" +
@@ -331,16 +337,16 @@ namespace algorandapp
             // First we update standard Transaction parameters
             // To account for changes in the state of the blockchain
             var transParams = algodApiInstance.TransactionParams();
-            var ap = algodApiInstance.AssetInformation((long?)assetID);
-
+            Asset ast = algodApiInstance.GetAssetByID(assetID);
+  
             // Note that configuration changes must be done by
             // The manager account, which is currently account2
             // Note in this transaction we are re-using the asset
             // creation parameters and only changing the manager
             // and transaction parameters like first and last round
             // now update the manager to account1
-            ap.Managerkey = account1.Address.ToString();
-            var tx = Utils.GetConfigAssetTransaction(account2.Address, assetID, ap, transParams, "config trans");
+            ast.Params.Manager = account1.Address.ToString();
+            var tx = Utils.GetConfigAssetTransaction(account2.Address, ast, transParams, "config trans");
 
             // The transaction must be signed by the current manager account
             // We are reusing the signedTx variable from the first transaction in the example    
@@ -350,7 +356,7 @@ namespace algorandapp
             string mytx;
             try
             {
-                TransactionID id = Utils.SubmitTransaction(algodApiInstance, signedTx);
+                PostTransactionsResponse id = Utils.SubmitTransaction(algodApiInstance, signedTx);
                 Console.WriteLine("Transaction ID: " + id.TxId);
                 mytx= id.TxId;
                 var wait = Utils.WaitTransactionToComplete(algodApiInstance, id.TxId);
@@ -358,12 +364,15 @@ namespace algorandapp
                 Console.WriteLine(wait);
                 await SecureStorage.SetAsync(helper.StorageLastASAButton, "manage");
                 buttonstate("manage");
-                var act = algodApiInstance.AssetInformation((long?)assetID).ToJson();
+               // var act = algodApiInstance.AssetInformation((long?)assetID).ToJson();
+                // Get the asset information for the newly changed asset            
+                ast = algodApiInstance.GetAssetByID(assetID);
+                //The manager should now be the same as the creator
 
                 var htmlSource = new HtmlWebViewSource();
                 htmlSource.Html = @"<html><body><h3>" + "Transaction ID = " + mytx + "</h3>" +
                     "<h3>" + "Asset ID = " + assetID.ToString() + "</h3>" +
-                    "<h3>" + "Asset Info = " + act.ToString() + "</h3>" +
+                    "<h3>" + "Asset Info = " + ast.ToString() + "</h3>" +
                     "</body></html>";
 
                 myWebView.Source = htmlSource;
@@ -403,18 +412,19 @@ namespace algorandapp
             // To account for changes in the state of the blockchain
 
             var transParams = algodApiInstance.TransactionParams();
-            var tx = Utils.GetActivateAssetTransaction(account3.Address, assetID, transParams, "opt in transaction");
+          //  var tx = Utils.GetActivateAssetTransaction(account3.Address, assetID, transParams, "opt in transaction");
+            var tx = Utils.GetAssetOptingInTransaction(account3.Address, assetID, transParams, "opt in transaction");
 
             // The transaction must be signed by the current manager account
             // We are reusing the signedTx variable from the first transaction in the example    
             var signedTx = account3.SignTransaction(tx);
             // send the transaction to the network and
             // wait for the transaction to be confirmed
-            Algorand.Algod.Client.Model.Account account = null;
+            Algorand.V2.Model.Account account = null;
             string mytx;
             try
             {
-                TransactionID id = Utils.SubmitTransaction(algodApiInstance, signedTx);
+                PostTransactionsResponse id = Utils.SubmitTransaction(algodApiInstance, signedTx);
                 Console.WriteLine("Transaction ID: " + id.TxId);
                 var wait = Utils.WaitTransactionToComplete(algodApiInstance, id.TxId);
                 mytx = id.TxId;
@@ -433,7 +443,7 @@ namespace algorandapp
 
                 var htmlSource = new HtmlWebViewSource();
                 htmlSource.Html = @"<html><body><h3>" + "Transaction ID = " + mytx + "</h3>" +
-                    "<h3>" + "Account 3 Asset Amount = " + account.GetHolding(assetID).Amount.ToString() + "</h3>" +
+                    "<h3>" + "Account 3 Asset Amount = " + account.Assets.Find(h => h.AssetId == assetID).Amount + "</h3>" +
                     "<h3>" + "Asset ID = " + assetID.ToString() + "</h3>" +
                     "</body></html>";
 
@@ -480,7 +490,7 @@ namespace algorandapp
             string mytx;
             try
             {
-                TransactionID id = Utils.SubmitTransaction(algodApiInstance, signedTx);
+                PostTransactionsResponse id = Utils.SubmitTransaction(algodApiInstance, signedTx);
                 Console.WriteLine("Transaction ID: " + id.TxId);
                 Console.WriteLine(Utils.WaitTransactionToComplete(algodApiInstance, id.TxId));
                 mytx = id.TxId;
@@ -489,16 +499,16 @@ namespace algorandapp
                 // and see that it now frozen 
    
                 var act = algodApiInstance.AccountInformation(account3.Address.ToString());
-                Console.WriteLine(act.GetHolding(assetID).ToString());
+                Console.WriteLine(act.Assets.Find(h => h.AssetId == assetID));
                 await SecureStorage.SetAsync(helper.StorageLastASAButton, "freeze");
                 buttonstate("freeze");
-                var asset = algodApiInstance.AssetInformation((long?)assetID).ToJson();
-                Algorand.Algod.Client.Model.Account account = algodApiInstance.AccountInformation(account3.Address.ToString());
+                var asset = algodApiInstance.GetAssetByID((long?)assetID).ToJson();
+                Algorand.V2.Model.Account account = algodApiInstance.AccountInformation(account3.Address.ToString());
 
                 var htmlSource = new HtmlWebViewSource();
                 htmlSource.Html = @"<html><body><h3>" + "Transaction ID = " + mytx + "</h3>" +
                        "<h3>" + "Asset ID = " + assetID.ToString() + "</h3>" +
-                    "<h3>" + "Account 3 Asset Freeze = " + account.GetHolding(assetID).Frozen.ToString()  + "</h3>" +
+                    "<h3>" + "Account 3 Asset Freeze = " + account.Assets.Find(h => h.AssetId == assetID) + "</h3>" +
                     "</body></html>";
 
                 myWebView.Source = htmlSource;
@@ -547,7 +557,7 @@ namespace algorandapp
             string mytx;
             try
             {
-                TransactionID id = Utils.SubmitTransaction(algodApiInstance, signedTx);
+                PostTransactionsResponse id = Utils.SubmitTransaction(algodApiInstance, signedTx);
                 Console.WriteLine("Transaction ID: " + id);
                 Console.WriteLine(Utils.WaitTransactionToComplete(algodApiInstance, id.TxId));
                 mytx = id.TxId;
@@ -557,15 +567,15 @@ namespace algorandapp
                 // and see that it now has 0 of the new asset
                 var act = algodApiInstance.AccountInformation(account3.Address.ToString());
 
-                Console.WriteLine(act.GetHolding(assetID).Amount);
+                Console.WriteLine(act.Assets.Find(h => h.AssetId == assetID).Amount);
                 await SecureStorage.SetAsync(helper.StorageLastASAButton, "revoke");
                 buttonstate("revoke");
-                Algorand.Algod.Client.Model.Account account = algodApiInstance.AccountInformation(account3.Address.ToString());
+                Algorand.V2.Model.Account account = algodApiInstance.AccountInformation(account3.Address.ToString());
 
                 var htmlSource = new HtmlWebViewSource();
                 htmlSource.Html = @"<html><body><h3>" + "Transaction ID = " + mytx + "</h3>" +
                        "<h3>" + "Asset ID = " + assetID.ToString() + "</h3>" +
-                    "<h3>" + "Account 3 Asset Amount = " + account.GetHolding(assetID).Amount.ToString() + "</h3>" +
+                    "<h3>" + "Account 3 Asset Amount = " + account.Assets.Find(h => h.AssetId == assetID).Amount + "</h3>" +
                     "</body></html>";
 
                 myWebView.Source = htmlSource;
@@ -611,8 +621,8 @@ namespace algorandapp
             string mytx;
             try
             {
-                TransactionID id = Utils.SubmitTransaction(algodApiInstance, signedTx);
-                Console.WriteLine("Transaction ID: " + id);
+                PostTransactionsResponse id = Utils.SubmitTransaction(algodApiInstance, signedTx);
+                Console.WriteLine("Transaction ID: " + id.TxId);
                 //waitForTransactionToComplete(algodApiInstance, signedTx.transactionID);
                 //Console.ReadKey();
                 Console.WriteLine(Utils.WaitTransactionToComplete(algodApiInstance, id.TxId));
@@ -622,7 +632,7 @@ namespace algorandapp
                 var act = algodApiInstance.AccountInformation(account1.Address.ToString());
 
                 Console.WriteLine("Does AssetID: " + assetID + " exist? " +
-                    act.Thisassettotal.ContainsKey(assetID));
+                    act.Assets.Find(h => h.AssetId == assetID));
 
 
                 await SecureStorage.SetAsync(helper.StorageAssetIDName, "");
@@ -631,11 +641,11 @@ namespace algorandapp
                 DestroyAsset.Opacity = 1;
                 await SecureStorage.SetAsync(helper.StorageLastASAButton, "destroy");
                 buttonstate("destroy");
-                Algorand.Algod.Client.Model.Account account = algodApiInstance.AccountInformation(account3.Address.ToString());
+                Algorand.V2.Model.Account account = algodApiInstance.AccountInformation(account3.Address.ToString());
 
                 var htmlSource = new HtmlWebViewSource();
                 htmlSource.Html = @"<html><body><h3>" + "Transaction ID = " + mytx + "</h3>" +
-                    "<h3>" + "Does AssetID: " + assetID + " exist? " + account.Thisassettotal.ContainsKey(assetID) + "</h3>" +
+                    "<h3>" + "AssetID: " + assetID + " destroyed "  + "</h3>" +
                     "</body></html>";
 
                 myWebView.Source = htmlSource;
@@ -679,25 +689,25 @@ namespace algorandapp
             string mytx;
             try
             {
-                TransactionID id = Utils.SubmitTransaction(algodApiInstance, signedTx);
+                PostTransactionsResponse id = Utils.SubmitTransaction(algodApiInstance, signedTx);
                 Console.WriteLine("Transaction ID: " + id.TxId);
                 mytx = id.TxId;
                 Console.WriteLine(Utils.WaitTransactionToComplete(algodApiInstance, id.TxId));
                 // We can now list the account information for acct3 
                 // and see that it now has 5 of the new asset
                 var act = algodApiInstance.AccountInformation(account3.Address.ToString());
-                Console.WriteLine(act.GetHolding(assetID).Amount);
+                Console.WriteLine(act.Assets.Find(h => h.AssetId == assetID).Amount);
      
                 TransferAsset.Opacity = 1;
                 await SecureStorage.SetAsync(helper.StorageLastASAButton, "transfer");
                 buttonstate("transfer");
-                var asset = algodApiInstance.AssetInformation((long?)assetID).ToJson();
-                Algorand.Algod.Client.Model.Account account = algodApiInstance.AccountInformation(account3.Address.ToString());
+                var asset = algodApiInstance.GetAssetByID((long?)assetID).ToJson();
+                Algorand.V2.Model.Account account = algodApiInstance.AccountInformation(account3.Address.ToString());
 
                 var htmlSource = new HtmlWebViewSource();
                 htmlSource.Html = @"<html><body><h3>" + "Transaction ID = " + mytx + "</h3>" +
                        "<h3>" + "Asset ID = " + assetID.ToString() + "</h3>" +
-                    "<h3>" + "Account 3 Asset Amount = " + account.GetHolding(assetID).Amount.ToString() + "</h3>" +
+                    "<h3>" + "Account 3 Asset Amount = " + account.Assets.Find(h => h.AssetId == assetID).Amount + "</h3>" +
                     "</body></html>";
 
                 myWebView.Source = htmlSource;
@@ -719,7 +729,7 @@ namespace algorandapp
 
         async void Reset_Clicked(System.Object sender, System.EventArgs e)
         {
-            await SecureStorage.SetAsync(helper.StorageAssetIDName, "");
+            await SecureStorage.SetAsync(helper.StorageAssetIDName, " ") ;
             await SecureStorage.SetAsync(helper.StorageLastASAButton, "init");
 
             myAsset.Text = "";
