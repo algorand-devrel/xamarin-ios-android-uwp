@@ -227,7 +227,11 @@
                     <WebView x:Name="myWebView" HeightRequest="500" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3">
 
                     </WebView>
+                    <!--<Entry x:Name="myEntry" HeightRequest="500" Grid.Row="12" Grid.Column="0" Placeholder="Block Info" />-->
+                    <!--<StackLayout x:Name="myStacklayout" HeightRequest="500" Grid.Row="12" Grid.Column="0"></StackLayout>-->
+                
                 </Grid>
+              
             </ScrollView>
         </StackLayout>
 

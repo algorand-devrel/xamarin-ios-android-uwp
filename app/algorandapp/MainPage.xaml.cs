@@ -38,7 +38,7 @@ namespace algorandapp
                 network = "TestNet";
             NetworkLabel.Text = "Network: " + network + " " + nodetype;
             var lastHomebutton = await SecureStorage.GetAsync(helper.StorageLastHomeButton);
-            if (string.IsNullOrEmpty(lastHomebutton))
+            if (string.IsNullOrEmpty(lastHomebutton) || lastHomebutton == " ")
             {
                 buttonstate("init");
             }
@@ -53,7 +53,7 @@ namespace algorandapp
             var account1 = await SecureStorage.GetAsync(helper.StorageAccountName1);
             var account2 = await SecureStorage.GetAsync(helper.StorageAccountName2);
             var account3 = await SecureStorage.GetAsync(helper.StorageAccountName3);
-            if ((string.IsNullOrEmpty(account1) || string.IsNullOrEmpty(account2)) || string.IsNullOrEmpty(account3))
+            if ((string.IsNullOrEmpty(account1) || account1 == " " || string.IsNullOrEmpty(account2)) || account2 == " " || string.IsNullOrEmpty(account3) || account3 == " ")
             {
                 StackGenerateAccount.IsEnabled = true;
                 GenerateAccount.Opacity = 1;
@@ -113,7 +113,7 @@ namespace algorandapp
         async void Reset_Clicked(System.Object sender, System.EventArgs e)
         {
             string ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps1";
-     
+
             // purestake hackathon
             string ALGOD_API_TOKEN_TESTNET = "B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab";
 
@@ -121,8 +121,39 @@ namespace algorandapp
             await SecureStorage.SetAsync(helper.StorageALGOD_API_ADDR_TESTNET, ALGOD_API_ADDR_TESTNET);
 
             await SecureStorage.SetAsync(helper.StorageNetwork, helper.StorageTestNet);
-    
+
             await SecureStorage.SetAsync(helper.StorageNodeType, helper.StoragePurestake);
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    await resetLocalStorage();
+                    break;
+                case Device.Android:
+                    await resetLocalStorage();
+                    break;
+                case Device.UWP:
+                    await resetLocalStorageUWP();
+                    break;
+                default:
+                    await resetLocalStorage();
+                    break;
+                   
+            }
+
+            ASA.Opacity = .4;
+            StackASA.IsEnabled = false;
+            AtomicTransfers.Opacity = .4;
+            StackAtomicTransfers.IsEnabled = false;
+            ASC1.Opacity = .4;
+            StackASC1.IsEnabled = false;
+            await DisplayAlert("Reset ", "Reset Complete", "Cancel");
+
+
+
+        }
+
+        private static async Task resetLocalStorage()
+        {
 
             await SecureStorage.SetAsync(helper.StorageAssetIDName, "");
             await SecureStorage.SetAsync(helper.StorageLastASAButton, "");
@@ -141,17 +172,28 @@ namespace algorandapp
             await SecureStorage.SetAsync(helper.StorageTestNetAddress, "");
             await SecureStorage.SetAsync(helper.StorageBetaNetToken, "");
             await SecureStorage.SetAsync(helper.StorageBetaNetAddress, "");
-            ASA.Opacity = .4;
-            StackASA.IsEnabled = false;
-            AtomicTransfers.Opacity = .4;
-            StackAtomicTransfers.IsEnabled = false;
-            ASC1.Opacity = .4;
-            StackASC1.IsEnabled = false;
-
-
-
-
         }
+        private static async Task resetLocalStorageUWP()
+        {
+            await SecureStorage.SetAsync(helper.StorageAssetIDName, " ");
+            await SecureStorage.SetAsync(helper.StorageLastASAButton, " ");
+
+            await SecureStorage.SetAsync(helper.StorageAccountName1, " ");
+            await SecureStorage.SetAsync(helper.StorageAccountName2, " ");
+            await SecureStorage.SetAsync(helper.StorageAccountName3, " ");
+            await SecureStorage.SetAsync(helper.StorageMultisig, " ");
+            await SecureStorage.SetAsync(helper.StorageTransaction, " ");
+            await SecureStorage.SetAsync(helper.StorageAtomicTransaction, " ");
+            await SecureStorage.SetAsync(helper.StorageMultisigTransaction, " ");
+            await SecureStorage.SetAsync(helper.StorageLastHomeButton, " ");
+            await SecureStorage.SetAsync(helper.StorageSavedBetaNetwork, " ");
+            await SecureStorage.SetAsync(helper.StorageSavedTestNetwork, " ");
+            await SecureStorage.SetAsync(helper.StorageTestNetToken, " ");
+            await SecureStorage.SetAsync(helper.StorageTestNetAddress, " ");
+            await SecureStorage.SetAsync(helper.StorageBetaNetToken, " ");
+            await SecureStorage.SetAsync(helper.StorageBetaNetAddress, " ");
+        }
+
     }
 
 

@@ -60,7 +60,7 @@ namespace algorandapp
             NetworkLabel.Text = "Network: " + network + " " + nodetype;
 
             var lastASAbutton = await SecureStorage.GetAsync(helper.StorageLastASAButton);
-            if (string.IsNullOrEmpty(lastASAbutton))
+            if (string.IsNullOrEmpty(lastASAbutton) || lastASAbutton == " ")
             {
                  buttonstate("init");
             }
@@ -80,7 +80,7 @@ namespace algorandapp
             Status.Text = "";
             NetworkLabel.Text = "Network: " + network;
             var AssetID = await SecureStorage.GetAsync(helper.StorageAssetIDName);
-            if (!String.IsNullOrEmpty(AssetID) )
+            if (!(String.IsNullOrEmpty(AssetID) || AssetID == " "))
             {
                 if (AssetID != " ")
                 { 
@@ -729,7 +729,15 @@ namespace algorandapp
 
         async void Reset_Clicked(System.Object sender, System.EventArgs e)
         {
-            await SecureStorage.SetAsync(helper.StorageAssetIDName, " ") ;
+            if (Device.RuntimePlatform == Device.UWP)
+            {
+                await SecureStorage.SetAsync(helper.StorageAssetIDName, " ");
+            }
+            else
+            {
+                await SecureStorage.SetAsync(helper.StorageAssetIDName, "");
+            }
+         
             await SecureStorage.SetAsync(helper.StorageLastASAButton, "init");
 
             myAsset.Text = "";
@@ -738,6 +746,7 @@ namespace algorandapp
             htmlSource.Html = @"<html><body></body></html>";
 
             myWebView.Source = htmlSource;
+            await DisplayAlert("Clear Asset ", "Asset Removed", "Cancel");
         }
 
 

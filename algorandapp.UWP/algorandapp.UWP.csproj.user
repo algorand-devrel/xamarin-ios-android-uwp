@@ -5,4 +5,7 @@
     <AuthenticationMode>Windows</AuthenticationMode>
     <RemoteDebugMachine>localhost</RemoteDebugMachine>
   </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
+  </PropertyGroup>
 </Project>

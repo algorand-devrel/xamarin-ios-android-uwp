@@ -18,7 +18,7 @@ using Org.BouncyCastle.Crypto.Parameters;
 using System.IO;
 using Xamarin.Essentials;
 using System.Numerics;
-
+using Newtonsoft.Json;
 
 namespace algorandapp
 {
@@ -81,8 +81,8 @@ namespace algorandapp
             Transactionp.IsVisible = true;
             MultisigTransactionp.IsVisible = true;
 
-            // test for null (first time) and "" (after first time)
-            if (string.IsNullOrEmpty(account1))
+            // test for null (first time) and "" or " " for UWP (after first time)
+            if (string.IsNullOrEmpty(account1) || account1 == " ")
             {
                 // this account is not generated yet
                 GenerateAccount1.IsEnabled = true;
@@ -103,7 +103,7 @@ namespace algorandapp
                 GetAccount1Infop.IsVisible = true;
                 // DisableNetworkToggles(network);
             }
-            if (string.IsNullOrEmpty(account2))
+            if (string.IsNullOrEmpty(account2) || account2 == " ")
             {
                 // this account is not generated yet
                 GenerateAccount2.IsEnabled = true;
@@ -125,7 +125,7 @@ namespace algorandapp
 
                 // DisableNetworkToggles(network);
             }
-            if (string.IsNullOrEmpty(account3))
+            if (string.IsNullOrEmpty(account3) || account3 == " ")
             {
                 // this account is not generated yet
                 GenerateAccount3.IsEnabled = true;
@@ -147,16 +147,16 @@ namespace algorandapp
                 // DisableNetworkToggles(network);
             }
 
-            if (!(string.IsNullOrEmpty(account1) ||
-                string.IsNullOrEmpty(account2) ||
-                string.IsNullOrEmpty(account3)))
+            if (!(string.IsNullOrEmpty(account1) || account1 == " " ||
+                string.IsNullOrEmpty(account2) || account2 == " " ||
+                string.IsNullOrEmpty(account3) || account3 == " "))
             {
                 // all accounts created - leave state
 
                 //    DisableNetworkToggles(network);
 
 
-                if (string.IsNullOrEmpty(msig))
+                if (string.IsNullOrEmpty(msig) || msig == " ")
                 {
                     CreateMultiSig.IsEnabled = true;
                     CreateMultiSig.Text = "Create Multisig Address";
@@ -188,7 +188,7 @@ namespace algorandapp
                     // enable send multisig transaction
                 }
 
-                if (string.IsNullOrEmpty(transaction))
+                if (string.IsNullOrEmpty(transaction) || transaction == " ")
                 {
                     Transaction.IsEnabled = true;
 
@@ -211,10 +211,10 @@ namespace algorandapp
                     GetTransactionp.IsVisible = true;
 
                 }
-                if (!(string.IsNullOrEmpty(msig)))
+                if (!(string.IsNullOrEmpty(msig) || msig == " "))
 
                 {
-                    if (string.IsNullOrEmpty(multisigtransaction))
+                    if (string.IsNullOrEmpty(multisigtransaction) || multisigtransaction == " ")
                     {
                         // only enable if multisigaddress created
                         MultisigTransaction.IsEnabled = true;
@@ -240,24 +240,24 @@ namespace algorandapp
             }
 
 
-            if (!String.IsNullOrEmpty(account1))
+            if (!(String.IsNullOrEmpty(account1) || account1 == " "))
             {
                 FundsNeeded1.IsVisible = await ToggleFundButton(network, helper.StorageAccountName1);
                 FundsNeeded1p.IsVisible = await ToggleFundButton(network, helper.StorageAccountName1);
             }
-            if (!String.IsNullOrEmpty(account2))
+            if (!String.IsNullOrEmpty(account2) || account2 == " ")
             {
                 FundsNeeded2.IsVisible = await ToggleFundButton(network, helper.StorageAccountName2);
                 FundsNeeded2p.IsVisible = await ToggleFundButton(network, helper.StorageAccountName2);
 
             }
-            if (!String.IsNullOrEmpty(account3))
+            if (!(String.IsNullOrEmpty(account3) || account3 == " "))
             {
                 FundsNeeded3.IsVisible = await ToggleFundButton(network, helper.StorageAccountName3);
                 FundsNeeded3p.IsVisible = await ToggleFundButton(network, helper.StorageAccountName3);
 
             }
-            if (!String.IsNullOrEmpty(msig))
+            if (!(String.IsNullOrEmpty(msig) || msig == " "))
             {
                 FundsNeededMS.IsVisible = await ToggleFundButton(network, helper.StorageMultisig);
                 FundsNeededMSp.IsVisible = await ToggleFundButton(network, helper.StorageMultisig);
@@ -269,7 +269,7 @@ namespace algorandapp
         {
             ulong? amount = await helper.GetAccountBalance(accountname);
             var account = await SecureStorage.GetAsync(helper.StorageAccountName1);
-            if (!(String.IsNullOrEmpty(account)))
+            if (!(String.IsNullOrEmpty(account) || account == " "))
             {
                 if (amount < helper.MIN_ACCOUNT_BALANCE)
                 {
@@ -395,14 +395,15 @@ namespace algorandapp
             {
                 try
                 {
+                    if (Device.RuntimePlatform == Device.UWP)
+                    {
+                       await ResetUWP();
+                    }
+                    else
+                    {
+                        await Reset();
+                    }
 
-                    await SecureStorage.SetAsync(helper.StorageAccountName1, "");
-                    await SecureStorage.SetAsync(helper.StorageAccountName2, "");
-                    await SecureStorage.SetAsync(helper.StorageAccountName3, "");
-                    await SecureStorage.SetAsync(helper.StorageMultisig, "");
-                    await SecureStorage.SetAsync(helper.StorageTransaction, "");
-                    await SecureStorage.SetAsync(helper.StorageMultisigTransaction, "");
-                
                     // keep storage network
                     // await SecureStorage.SetAsync(helper.StorageNetwork, "TestNet");
 
@@ -479,6 +480,7 @@ namespace algorandapp
 
 
                     buttonstate();
+                    await DisplayAlert("Clear Accounts ", "Accounts Removed", "Cancel");
 
                 }
                 catch (Exception ex)
@@ -489,6 +491,27 @@ namespace algorandapp
             }
 
 
+        }
+
+        private static async Task ResetUWP()
+        {
+        
+            await SecureStorage.SetAsync(helper.StorageAccountName1, " ");
+            await SecureStorage.SetAsync(helper.StorageAccountName2, " ");
+            await SecureStorage.SetAsync(helper.StorageAccountName3, " ");
+            await SecureStorage.SetAsync(helper.StorageMultisig, " ");
+            await SecureStorage.SetAsync(helper.StorageTransaction, " ");
+            await SecureStorage.SetAsync(helper.StorageMultisigTransaction, " ");
+        }
+        private static async Task Reset()
+        {
+
+            await SecureStorage.SetAsync(helper.StorageAccountName1, "");
+            await SecureStorage.SetAsync(helper.StorageAccountName2, "");
+            await SecureStorage.SetAsync(helper.StorageAccountName3, "");
+            await SecureStorage.SetAsync(helper.StorageMultisig, "");
+            await SecureStorage.SetAsync(helper.StorageTransaction, "");
+            await SecureStorage.SetAsync(helper.StorageMultisigTransaction, "");
         }
 
         public async void GetAccount1Info_Clicked(System.Object sender, System.EventArgs e)
@@ -539,10 +562,11 @@ namespace algorandapp
             try
             {
                 block = await algodApiInstance.GetBlockAsync(lastround);
-
+                // myEntry.Text = JsonPrettify(block.ToJson());
+                //  myStacklayout = JsonPrettify(block.ToJson());
                 var htmlSource = new HtmlWebViewSource();
                 htmlSource.Html = @"<html><body><h3>" + "Last Round = " + lastround.ToString() + "</h3>" +
-                    "<h3>" + "Block Info = " + block.ToJson() + "</h3>" +
+                    "<h3>" + "Block Info = " + JsonPrettify(block.ToJson()) + "</h3>" +
                     "</body></html>";
                 myWebView.Source = htmlSource;
                 myWebViewp.Source = htmlSource;
@@ -559,7 +583,20 @@ namespace algorandapp
         }
 
 
+        public static string JsonPrettify(string json)
+        {
+            dynamic parsedJson = JsonConvert.DeserializeObject(json);
+            return JsonConvert.SerializeObject(parsedJson, Formatting.Indented);
 
+            //using (var stringReader = new StringReader(json))
+            //using (var stringWriter = new StringWriter())
+            //{
+            //    var jsonReader = new JsonTextReader(stringReader);
+            //    var jsonWriter = new JsonTextWriter(stringWriter) { Formatting = Formatting.Indented };
+            //    jsonWriter.WriteToken(jsonReader);
+            //    return stringWriter.ToString();
+            //}
+        }
 
         public async void GetAccount2Info_Clicked(System.Object sender, System.EventArgs e)
         {
@@ -706,7 +743,7 @@ namespace algorandapp
                 //  Entry4.Text = "Transaction ID = " + err.Message;
             }
 
-            if (!(String.IsNullOrEmpty(id.TxId)))
+            if (!(String.IsNullOrEmpty(id.TxId) ))
             {
                 await SecureStorage.SetAsync(helper.StorageTransaction, id.TxId.ToString());
                 GetTransaction.IsVisible = true;
@@ -883,7 +920,7 @@ namespace algorandapp
 
         private async Task PromptToAddFunds(string network, string accountname)
         {
-            if (!(String.IsNullOrEmpty(accountname)))
+            if (!(String.IsNullOrEmpty(accountname) || accountname == " "))
             {
                 ulong? amount = await helper.GetAccountBalance(accountname);
                 if (amount < helper.MIN_ACCOUNT_BALANCE)

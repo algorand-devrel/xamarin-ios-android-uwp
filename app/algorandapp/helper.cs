@@ -134,8 +134,12 @@ namespace algorandapp
                 string mnemonic = await SecureStorage.GetAsync(accountname);
                 if (mnemonic != null)
                 {
+                    if (mnemonic != " ")
+                    {
                     account = new Account(mnemonic);
                     myaddress = account.Address.ToString();
+                    }
+
                 }
             }
             else
@@ -146,7 +150,7 @@ namespace algorandapp
             algodApiInstance = await CreateApiInstance();
             if (algodApiInstance != null)
             {
-                if (!(String.IsNullOrEmpty(myaddress)))
+                if (!(String.IsNullOrEmpty(myaddress) || myaddress == " "))
                 {
                     Algorand.V2.Model.Account accountinfo = algodApiInstance.AccountInformation(myaddress);
 
@@ -167,7 +171,7 @@ namespace algorandapp
             string ALGOD_API_ADDR_TESTNET = await SecureStorage.GetAsync(StorageALGOD_API_ADDR_TESTNET);
             string ALGOD_API_ADDR_BETANET = await SecureStorage.GetAsync(StorageALGOD_API_ADDR_BETANET);
             string network = await GetNetwork();
-            if (string.IsNullOrEmpty(network))
+            if ((string.IsNullOrEmpty(network) || network == " "))
             {
                 //first time - default to TestNet/Purestake
                 ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps1";

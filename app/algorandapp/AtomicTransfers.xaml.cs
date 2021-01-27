@@ -52,7 +52,7 @@ namespace algorandapp
         {
             NetworkLabel.Text = "Network: " + network + " " + nodetype;
             var myAT = await SecureStorage.GetAsync(helper.StorageAtomicTransaction);
-            if (string.IsNullOrEmpty(myAT))
+            if (string.IsNullOrEmpty(myAT) || myAT == " ")
             {
                 AtomicTransferInfo.IsEnabled = false;
             }
@@ -144,7 +144,15 @@ namespace algorandapp
 
         async void Reset_Clicked(System.Object sender, System.EventArgs e)
         {
-            await SecureStorage.SetAsync(helper.StorageAtomicTransaction, "");
+            if (Device.RuntimePlatform == Device.UWP)
+            {
+                await SecureStorage.SetAsync(helper.StorageAtomicTransaction, " ");
+            }
+            else
+            {
+                await SecureStorage.SetAsync(helper.StorageAtomicTransaction, "");
+            }
+
             AtomicTransferInfo.IsEnabled = false;
 
         }

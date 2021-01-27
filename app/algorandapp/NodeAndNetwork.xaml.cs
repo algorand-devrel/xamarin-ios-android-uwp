@@ -254,7 +254,7 @@ namespace algorandapp
 
             }
 
-            if (String.IsNullOrEmpty(network))
+            if (String.IsNullOrEmpty(network) || network == " ")
             {
                 //default to TestNet
                 await SecureStorage.SetAsync(helper.StorageNetwork, helper.StorageTestNet);
@@ -296,7 +296,7 @@ namespace algorandapp
                 TestNetStack.IsVisible = true;
 
                 var savedtest = await SecureStorage.GetAsync(helper.StorageSavedTestNetwork);
-                if ((!String.IsNullOrEmpty(savedtest)) && (savedtest == "true"))
+                if ((!(String.IsNullOrEmpty(savedtest) || savedtest == " ")) && (savedtest == "true"))
                 {
                     EntryTestNetToken.Text = await SecureStorage.GetAsync(helper.StorageTestNetToken);
                     EntryTestNetServer.Text = await SecureStorage.GetAsync(helper.StorageTestNetAddress);
@@ -311,7 +311,7 @@ namespace algorandapp
                 BetaNetStack.IsVisible = true;
                 TestNetStack.IsVisible = false;
                 var savedbeta = await SecureStorage.GetAsync(helper.StorageSavedBetaNetwork);
-                if ((!String.IsNullOrEmpty(savedbeta)) && (savedbeta == "true"))
+                if (!(String.IsNullOrEmpty(savedbeta) || savedbeta == " ") && (savedbeta == "true"))
                 {
                     EntryBetaNetToken.Text = await SecureStorage.GetAsync(helper.StorageBetaNetToken);
                     EntryBetaNetServer.Text = await SecureStorage.GetAsync(helper.StorageBetaNetAddress);
