@@ -14,8 +14,8 @@ using Account = Algorand.Account;
 
 // Purestake 
 //public const string ALGOD_API_TOKEN_BETANET = "B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab";
-//public const string ALGOD_API_ADDR_BETANET = "https://betanet-algorand.api.purestake.io/ps1";
-//public const string ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps1";
+//public const string ALGOD_API_ADDR_BETANET = "https://betanet-algorand.api.purestake.io/ps2";
+//public const string ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps2";
 //public const string ALGOD_API_TOKEN_TESTNET = "B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab";
 
 // Standalone hackathon instance
@@ -150,7 +150,9 @@ namespace algorandapp
             algodApiInstance = await CreateApiInstance();
             if (algodApiInstance != null)
             {
-                if (!(String.IsNullOrEmpty(myaddress) || myaddress == " "))
+                if (String.IsNullOrEmpty(myaddress) || myaddress == " ")
+                { }
+                else
                 {
                     Algorand.V2.Model.Account accountinfo = algodApiInstance.AccountInformation(myaddress);
 
@@ -174,7 +176,7 @@ namespace algorandapp
             if ((string.IsNullOrEmpty(network) || network == " "))
             {
                 //first time - default to TestNet/Purestake
-                ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps1";
+                ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps2";
                 ALGOD_API_TOKEN_TESTNET = "B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab";
                 await SecureStorage.SetAsync(StorageALGOD_API_TOKEN_TESTNET, ALGOD_API_TOKEN_TESTNET);
                 await SecureStorage.SetAsync(StorageALGOD_API_ADDR_TESTNET, ALGOD_API_ADDR_TESTNET);

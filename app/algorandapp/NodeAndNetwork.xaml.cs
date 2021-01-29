@@ -21,8 +21,8 @@ namespace algorandapp
     {
         // Purestake
         //public const string ALGOD_API_TOKEN_BETANET = "B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab";
-        //public const string ALGOD_API_ADDR_BETANET = "https://betanet-algorand.api.purestake.io/ps1";
-        //public const string ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps1";
+        //public const string ALGOD_API_ADDR_BETANET = "https://betanet-algorand.api.purestake.io/ps2";
+        //public const string ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps2";
         //public const string ALGOD_API_TOKEN_TESTNET = "B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab";
 
         // Standalone instance
@@ -296,10 +296,16 @@ namespace algorandapp
                 TestNetStack.IsVisible = true;
 
                 var savedtest = await SecureStorage.GetAsync(helper.StorageSavedTestNetwork);
-                if ((!(String.IsNullOrEmpty(savedtest) || savedtest == " ")) && (savedtest == "true"))
-                {
+                //  if ((!(String.IsNullOrEmpty(savedtest) || savedtest == " ")) && (savedtest == "true"))
+                if (String.IsNullOrEmpty(savedtest) || savedtest == " ")
+                { }
+                else
+                { 
+                    if (savedtest == "true")
+                    {
                     EntryTestNetToken.Text = await SecureStorage.GetAsync(helper.StorageTestNetToken);
                     EntryTestNetServer.Text = await SecureStorage.GetAsync(helper.StorageTestNetAddress);
+                    }
                 }
             }
             else
@@ -311,11 +317,18 @@ namespace algorandapp
                 BetaNetStack.IsVisible = true;
                 TestNetStack.IsVisible = false;
                 var savedbeta = await SecureStorage.GetAsync(helper.StorageSavedBetaNetwork);
-                if (!(String.IsNullOrEmpty(savedbeta) || savedbeta == " ") && (savedbeta == "true"))
+                //             if (!(String.IsNullOrEmpty(savedbeta) || savedbeta == " ") && (savedbeta == "true"))
+                if (String.IsNullOrEmpty(savedbeta) || savedbeta == " ")
+                { }
+                else
                 {
+                if (savedbeta == "true")
+                    {
                     EntryBetaNetToken.Text = await SecureStorage.GetAsync(helper.StorageBetaNetToken);
                     EntryBetaNetServer.Text = await SecureStorage.GetAsync(helper.StorageBetaNetAddress);
+                    }
                 }
+
 
             }
         }
@@ -442,7 +455,7 @@ namespace algorandapp
         private async Task PurestakeTestNetClicked()
         {
             // Purestake TestNet
-            ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps1";
+            ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps2";
             ALGOD_API_TOKEN_TESTNET = "B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab";
 
             await SecureStorage.SetAsync(helper.StorageALGOD_API_TOKEN_TESTNET, ALGOD_API_TOKEN_TESTNET);

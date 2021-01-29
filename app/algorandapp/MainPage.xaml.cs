@@ -112,7 +112,7 @@ namespace algorandapp
 
         async void Reset_Clicked(System.Object sender, System.EventArgs e)
         {
-            string ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps1";
+            string ALGOD_API_ADDR_TESTNET = "https://testnet-algorand.api.purestake.io/ps2";
 
             // purestake hackathon
             string ALGOD_API_TOKEN_TESTNET = "B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab";
@@ -146,7 +146,7 @@ namespace algorandapp
             StackAtomicTransfers.IsEnabled = false;
             ASC1.Opacity = .4;
             StackASC1.IsEnabled = false;
-            await DisplayAlert("Reset ", "Reset Complete", "Cancel");
+            await DisplayAlert("Reset ", "Reset Complete", "OK");
 
 
 
@@ -194,6 +194,23 @@ namespace algorandapp
             await SecureStorage.SetAsync(helper.StorageBetaNetAddress, " ");
         }
 
+        private async void CompileTeal_Tapped(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new CompileTeal());
+        }
+        private async void DryrunDebugging_Tapped(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new DryrunDebugging());
+        }
+
+        private async void Indexer_Tapped(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new Indexer());
+        }
+        private async void Rekey_Tapped(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new Rekey());
+        }
     }
 
 

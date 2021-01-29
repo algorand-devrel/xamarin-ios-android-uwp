@@ -16,11 +16,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wordlists\" />
-    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\changemanager.jpg" />
+    <None Remove="Assets\compileteal.png" />
+    <None Remove="Assets\dryrundebugging.png" />
+    <None Remove="Assets\Indexer.png" />
     <None Remove="Assets\opt-in.jpg" />
+    <None Remove="Assets\rekey.png" />
     <None Remove="Assets\transfer-asset.jpg" />
     <None Remove="Assets\changemanager50.png" />
     <None Remove="Assets\changemanager.png" />
@@ -37,13 +40,18 @@
     <None Remove="Assets\HomeNodeNetworkSettings.jpg" />
     <None Remove="Assets\accountdelegation.png" />
     <None Remove="Assets\contractaccount.png" />
+    <None Remove="Contract\sample.teal" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Assets\changemanager.png" />
+    <EmbeddedResource Include="Assets\compileteal.png" />
     <EmbeddedResource Include="Assets\createasset.png" />
     <EmbeddedResource Include="Assets\destroy.png" />
+    <EmbeddedResource Include="Assets\dryrundebugging.png" />
     <EmbeddedResource Include="Assets\freeze.png" />
+    <EmbeddedResource Include="Assets\indexer.png" />
     <EmbeddedResource Include="Assets\optin.png" />
+    <EmbeddedResource Include="Assets\rekey.png" />
     <EmbeddedResource Include="Assets\revoke.png" />
     <EmbeddedResource Include="Assets\transferasset.png" />
     <EmbeddedResource Include="Assets\homeaccountstransfers.jpg" />
@@ -53,5 +61,20 @@
     <EmbeddedResource Include="Assets\homenodenetworksettings.jpg" />
     <EmbeddedResource Include="Assets\contractaccount.png" />
     <EmbeddedResource Include="Assets\accountdelegation.png" />
+    <EmbeddedResource Include="Contract\sample.teal" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="CompileTeal.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DryrunDebugging.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Indexer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Rekey.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

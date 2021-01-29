@@ -80,7 +80,9 @@ namespace algorandapp
             Status.Text = "";
             NetworkLabel.Text = "Network: " + network;
             var AssetID = await SecureStorage.GetAsync(helper.StorageAssetIDName);
-            if (!(String.IsNullOrEmpty(AssetID) || AssetID == " "))
+            if (String.IsNullOrEmpty(AssetID) || AssetID == " ")
+            { }
+            else
             {
                 if (AssetID != " ")
                 { 
@@ -273,9 +275,11 @@ namespace algorandapp
             // Create the Asset
             // Total number of this asset available for circulation = 10000
 
-            var ap = new AssetParams(creator: account1.Address.ToString(), name: "latikum22",
+            var ap = new AssetParams(creator: account1.Address.ToString(), 
+                name: "latikum22",
                 unitName: "LAT", defaultFrozen: false, total: 10000,
-                decimals: 0, url: "http://this.test.com", metadataHash: Encoding.ASCII.GetBytes("16efaa3924a6fd9d3a4880099a4ac65d"))
+                decimals: 0, url: "http://this.test.com", 
+                metadataHash: Encoding.ASCII.GetBytes("16efaa3924a6fd9d3a4880099a4ac65d"))
             {
                 Manager = account2.Address.ToString()
             };

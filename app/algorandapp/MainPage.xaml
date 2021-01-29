@@ -147,6 +147,72 @@
                     </Label>
 
                 </StackLayout  >
+                <StackLayout x:Name="StackCompileTeal" Grid.Row="4" Grid.Column="0">
+                    <Image x:Name="CompileTeal"  Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.compileteal.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="CompileTeal_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Compile Teal">
+                    </Label>
+
+                </StackLayout>
+
+
+                <StackLayout x:Name="StackDryrun_debugging"  Grid.Row="4" Grid.Column="1">
+                    <Image x:Name="Dryrun_debugging"  Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.dryrundebugging.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="DryrunDebugging_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Dryrun Debugging">
+                    </Label>
+
+                </StackLayout  >
+                <StackLayout x:Name="StackIndexer" Grid.Row="5" Grid.Column="0">
+                    <Image x:Name="Indexer"  Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.indexer.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="Indexer_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Indexer">
+                    </Label>
+
+                </StackLayout>
+                <StackLayout x:Name="StackRekey" Grid.Row="5" Grid.Column="1">
+                    <Image x:Name="Rekey"  Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.rekey.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="Rekey_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Rekey">
+                    </Label>
+
+                </StackLayout>
 
             </Grid>
 
