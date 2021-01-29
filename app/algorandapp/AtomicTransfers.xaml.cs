@@ -95,7 +95,7 @@ namespace algorandapp
                 //contact the signed msgpack
                 List<byte> byteList = new List<byte>(Algorand.Encoder.EncodeToMsgPack(signedTx));
                 byteList.AddRange(Algorand.Encoder.EncodeToMsgPack(signedTx2));
-                var act = algodApiInstance.AccountInformation(account1.Address.ToString());
+                var act = await algodApiInstance.AccountInformationAsync(account1.Address.ToString());
                 var before = "Account 1 balance before: " + act.Amount.ToString();
                 var id = algodApiInstance.RawTransaction(byteList.ToArray());
                 var wait = Utils.WaitTransactionToComplete(algodApiInstance, id.TxId);
@@ -103,7 +103,7 @@ namespace algorandapp
 
                 // Console.WriteLine("Successfully sent tx group with first tx id: " + id);
 
-                act = algodApiInstance.AccountInformation(account1.Address.ToString());
+                act = await algodApiInstance.AccountInformationAsync(account1.Address.ToString());
         
                 await SecureStorage.SetAsync(helper.StorageAtomicTransaction, wait.ToString());
 
@@ -128,7 +128,7 @@ namespace algorandapp
 
         async void AtomicTransferInfo_Clicked(System.Object sender, System.EventArgs e)
         {
-            var act = algodApiInstance.AccountInformation(account1.Address.ToString());
+            var act = await algodApiInstance.AccountInformationAsync(account1.Address.ToString());
             var mytx = await SecureStorage.GetAsync(helper.StorageAtomicTransaction);
 
           

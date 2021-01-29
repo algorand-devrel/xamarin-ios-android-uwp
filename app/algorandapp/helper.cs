@@ -154,7 +154,11 @@ namespace algorandapp
                 { }
                 else
                 {
-                    Algorand.V2.Model.Account accountinfo = algodApiInstance.AccountInformation(myaddress);
+              //      var task = algodApiInstance.AccountInformationAsync(myaddress);
+              //      task.Wait();
+              //      var accountinfo = task.Result;
+
+                    Algorand.V2.Model.Account accountinfo = await algodApiInstance.AccountInformationAsync(myaddress);
 
                     if (accountinfo != null)
                     {

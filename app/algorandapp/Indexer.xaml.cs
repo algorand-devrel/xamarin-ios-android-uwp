@@ -16,6 +16,7 @@ namespace algorandapp
     {
         public Indexer()
         {
+            // UI code to be completed - testing only
             InitializeComponent();
             IndexerExamples();
 

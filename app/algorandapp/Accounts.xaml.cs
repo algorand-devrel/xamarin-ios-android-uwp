@@ -556,7 +556,9 @@ namespace algorandapp
             //restore account from mnemonic
             account = new Account(mnemonic);
 
-            Algorand.V2.Model.Account accountinfo = algodApiInstance.AccountInformation(account.Address.ToString());
+           // Algorand.V2.Model.Account accountinfo = algodApiInstance.AccountInformation(account.Address.ToString());
+            var accountinfo = await algodApiInstance.AccountInformationAsync(account.Address.ToString());
+
 
             Debug.WriteLine("accountinfo: " + accountinfo);
 
@@ -726,15 +728,15 @@ namespace algorandapp
             var signedTx = account1.SignTransaction(tx);
             Console.WriteLine("Signed transaction with txid: " + signedTx.transactionID);
             PostTransactionsResponse id = null;
-            string wait = "";
+          //  string wait = "";
             // send the transaction to the network
             try
             {
                 id = Utils.SubmitTransaction(algodApiInstance, signedTx);
                 Console.WriteLine("Successfully sent tx with id: " + id.TxId);
-                wait = Utils.WaitTransactionToComplete(algodApiInstance, id.TxId);
+                var wait = Utils.WaitTransactionToComplete(algodApiInstance, id.TxId);
 
-                Console.WriteLine(wait);
+                Console.WriteLine("Successful! " + wait.Txn );
                 await DisplayAccount(helper.StorageAccountName2);
             }
             catch (ApiException err)
@@ -779,8 +781,7 @@ namespace algorandapp
             if (!(mytx == null || mytx == ""))
 
             {
-                Algorand.V2.Model.Account accountinfo =
-                algodApiInstance.AccountInformation(account2.Address.ToString());
+                Algorand.V2.Model.Account accountinfo = await algodApiInstance.AccountInformationAsync(account2.Address.ToString());
 
                 Debug.WriteLine("Account 2 info: " + accountinfo);
                 htmlSource = new HtmlWebViewSource();

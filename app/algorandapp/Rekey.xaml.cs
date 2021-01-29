@@ -14,6 +14,7 @@ namespace algorandapp
     {
         public Rekey()
         {
+            //  to be completed
             InitializeComponent();
         }
     }

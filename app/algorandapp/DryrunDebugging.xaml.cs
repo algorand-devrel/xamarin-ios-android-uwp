@@ -19,6 +19,7 @@ namespace algorandapp
     {
         public DryrunDebugging()
         {
+            // UI code to be completed - testing only
             InitializeComponent();
             DryrunDebuggingExample();
         }

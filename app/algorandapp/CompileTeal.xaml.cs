@@ -18,6 +18,7 @@ namespace algorandapp
     {
         public CompileTeal()
         {
+            // UI code to be completed - testing only
             InitializeComponent();
             CompileTealExample();
         }
