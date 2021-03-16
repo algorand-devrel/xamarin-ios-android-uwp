@@ -1,35 +1,23 @@
 ﻿<Properties StartupConfiguration="{3D8488E0-5101-4301-82D6-304AE6FB9D56}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="app/algorandapp/NodeAndNetwork.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="app/algorandapp/Rekey.xaml.cs">
     <Files>
-      <File FileName="app/algorandapp/MainPage.xaml" Line="1" Column="1" />
-      <File FileName="app/algorandapp/MainPage.xaml.cs" />
-      <File FileName="app/algorandapp/ASA.xaml" />
-      <File FileName="app/algorandapp/ASA.xaml.cs" />
-      <File FileName="app/algorandapp.iOS/Main.cs" />
-      <File FileName="app/algorandapp/ASC.xaml.cs" />
-      <File FileName="app/algorandapp/Accounts.xaml.cs" Line="523" Column="1" />
-      <File FileName="app/algorandapp/helper.cs" />
-      <File FileName="app/algorandapp/App.xaml.cs" />
-      <File FileName="app/algorandapp/AtomicTransfers.xaml.cs" />
-      <File FileName="app/algorandapp/NodeAndNetwork.xaml.cs" Line="424" Column="1" />
-      <File FileName="../../../../.nuget/packages/xamarin.essentials/1.6.1-preview1/readme.txt" Line="1" Column="1" />
-      <File FileName="app/algorandapp/NodeAndNetwork.xaml" Line="152" Column="49" />
+      <File FileName="app/algorandapp/Rekey.xaml.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="XamarinApp" expanded="True">
             <Node name="algorandapp" expanded="True">
-              <Node name="Accounts.xaml" expanded="True" />
-              <Node name="NodeAndNetwork.xaml" expanded="True" />
+              <Node name="Rekey.xaml" expanded="True">
+                <Node name="Rekey.xaml.cs" selected="True" />
+              </Node>
             </Node>
-            <Node name="algorandapp.Android" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.algorandapp.iOS Xamarin.HotReload.WrongLinkerErrorInfoBar.algorandapp.iOS.HideInfoBar="True" automaticSigning="False" TriggeredFromHotReload="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.877DCB35-19D7-457F-8609-46506AE5335E" />
+  <MonoDevelop.Ide.ItemProperties.algorandapp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1E1E3919-937D-4CAC-9AE1-DED289C8D7F4" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -46,8 +34,6 @@
       <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="667" column="1" />
       <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="674" column="2" />
       <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="807" column="2" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="815" column="3" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="816" column="3" />
       <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="822" column="2" />
       <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="793" column="1" />
       <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="272" column="1" />
@@ -68,8 +54,9 @@
       <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/AtomicTransfers.xaml.cs" relfile="app/algorandapp/AtomicTransfers.xaml.cs" line="98" column="1" />
       <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/helper.cs" relfile="app/algorandapp/helper.cs" line="169" column="1" />
       <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/NodeAndNetwork.xaml.cs" relfile="app/algorandapp/NodeAndNetwork.xaml.cs" line="187" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Rekey.xaml.cs" relfile="app/algorandapp/Rekey.xaml.cs" line="28" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.algorandapp.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" Xamarin.HotReload.DebuggerTimeoutException.algorandapp.Android.HideInfoBar="True" PreferredExecutionTarget="Android.nexus_10_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.ItemProperties.algorandapp.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
 </Properties>

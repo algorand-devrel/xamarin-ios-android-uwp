@@ -211,6 +211,10 @@ namespace algorandapp
         {
             await this.Navigation.PushAsync(new Rekey());
         }
+        private async void Stateful_Tapped(System.Object sender, System.EventArgs e)
+        {
+            await this.Navigation.PushAsync(new StatefulContracts());
+        }
     }
 
 

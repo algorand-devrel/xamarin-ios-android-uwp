@@ -52,7 +52,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -213,7 +213,23 @@
                     </Label>
 
                 </StackLayout>
+                <!--StateFullContracts.png-->
+                <StackLayout x:Name="StackStateful" Grid.Row="6" Grid.Column="0">
+                    <Image x:Name="Stateful"  Aspect="AspectFill"
+                Source="{local:ImageResource algorandapp.Assets.StateFullContracts.png}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="Stateful_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label 
+                    VerticalOptions="Center" FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Blue" Text="Stateful Contracts">
+                    </Label>
 
+                </StackLayout>                
             </Grid>
 
         </ScrollView>
