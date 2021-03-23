@@ -26,8 +26,10 @@ namespace algorandapp
         {
             //string ALGOD_API_ADDR = "https://testnet-algorand.api.purestake.io/idx2";
             //string ALGOD_API_TOKEN = "GeHdp7CCGt7ApLuPNppXN4LtrW07Mm1kaFNJ5Ovr";
-            string ALGOD_API_ADDR = "http://localhost:4001";
-            string ALGOD_API_TOKEN = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            //string ALGOD_API_ADDR = "http://localhost:4001";
+            //string ALGOD_API_TOKEN = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            string ALGOD_API_ADDR = "http://hackathon.algodev.network:9100";
+            string ALGOD_API_TOKEN = "ef920e2e7e002953f4b29a8af720efe8e4ecc75ff102b165e0472834b25832c1";
 
 
             var account1_passphrase = "fringe model trophy claw stove perfect address market license abstract master slender choice around field embark sudden carbon exclude abuse square bulb front ability violin";

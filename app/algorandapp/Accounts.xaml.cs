@@ -575,19 +575,13 @@ namespace algorandapp
         public async void GetBlock_Clicked(System.Object sender, System.EventArgs e)
         {
 
-            //var task = await algodApiInstance.GetStatusAsync();
-            //task.Wait();
-            //var status = task.Result;
+
             var status = await algodApiInstance.GetStatusAsync();
-          //  var status = algodApiInstance.GetStatus();
             long lastround = (long)status.LastRound;
-         //   long lastround = (long)status.LastRound;
             BlockResponse block;
             try
             {
                 block = await algodApiInstance.GetBlockAsync(lastround);
-                // myEntry.Text = JsonPrettify(block.ToJson());
-                //  myStacklayout = JsonPrettify(block.ToJson());
                 var htmlSource = new HtmlWebViewSource();
                 htmlSource.Html = @"<html><body><h3>" + "Last Round = " + lastround.ToString() + "</h3>" +
                     "<h3>" + "Block Info = " + JsonPrettify(block.ToJson()) + "</h3>" +

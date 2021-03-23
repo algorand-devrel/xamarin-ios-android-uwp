@@ -1,60 +1,88 @@
 ﻿<Properties StartupConfiguration="{3D8488E0-5101-4301-82D6-304AE6FB9D56}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="app/algorandapp/Rekey.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="app/algorandapp/StatefulContracts.xaml.cs">
     <Files>
-      <File FileName="app/algorandapp/Rekey.xaml.cs" Line="1" Column="1" />
+      <File FileName="app/algorandapp/Rekey.xaml.cs" Line="92" Column="59" />
+      <File FileName="app/algorandapp/helper.cs" Line="169" Column="1" />
+      <File FileName="app/algorandapp/Accounts.xaml.cs" Line="881" Column="74" />
+      <File FileName="app/algorandapp/ASA.xaml.cs" Line="619" Column="1" />
+      <File FileName="app/algorandapp/NodeAndNetwork.xaml.cs" Line="32" Column="51" />
+      <File FileName="app/algorandapp/AtomicTransfers.xaml.cs" Line="84" Column="1" />
+      <File FileName="app/algorandapp/ASC.xaml.cs" Line="150" Column="1" />
+      <File FileName="app/algorandapp/CompileTeal.xaml.cs" Line="57" Column="1" />
+      <File FileName="app/algorandapp/DryrunDebugging.xaml.cs" Line="83" Column="1" />
+      <File FileName="app/algorandapp/MainPage.xaml.cs" Line="203" Column="1" />
+      <File FileName="app/algorandapp/MainPage.xaml" Line="181" Column="29" />
+      <File FileName="app/algorandapp/Indexer.xaml.cs" Line="44" Column="1" />
+      <File FileName="app/algorandapp/StatefulContracts.xaml.cs" Line="254" Column="1" />
+      <File FileName="app/algorandapp.iOS/Main.cs" Line="17" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="XamarinApp" expanded="True">
+          <Node name="XamarinApp" expanded="True" selected="True">
             <Node name="algorandapp" expanded="True">
-              <Node name="Rekey.xaml" expanded="True">
-                <Node name="Rekey.xaml.cs" selected="True" />
-              </Node>
+              <Node name="Assets" expanded="True" />
+              <Node name="StatefulContracts.xaml" expanded="True" />
             </Node>
+            <Node name="algorandapp.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.algorandapp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1E1E3919-937D-4CAC-9AE1-DED289C8D7F4" />
+  <MonoDevelop.Ide.ItemProperties.algorandapp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E8D15E74-30D6-4774-8A0C-7551B77877CC" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASC.xaml.cs" relfile="app/algorandapp/ASC.xaml.cs" line="121" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASC.xaml.cs" relfile="app/algorandapp/ASC.xaml.cs" line="56" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASC.xaml.cs" relfile="app/algorandapp/ASC.xaml.cs" line="75" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASC.xaml.cs" relfile="app/algorandapp/ASC.xaml.cs" line="87" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASC.xaml.cs" relfile="app/algorandapp/ASC.xaml.cs" line="91" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASC.xaml.cs" relfile="app/algorandapp/ASC.xaml.cs" line="142" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="347" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/helper.cs" relfile="app/algorandapp/helper.cs" line="86" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="666" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="667" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="674" column="2" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="807" column="2" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="822" column="2" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="793" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="272" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="283" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="292" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="304" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="334" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="343" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="407" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="476" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="545" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="611" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="680" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/ASC.xaml.cs" relfile="app/algorandapp/ASC.xaml.cs" line="145" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/AtomicTransfers.xaml.cs" relfile="app/algorandapp/AtomicTransfers.xaml.cs" line="81" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/AtomicTransfers.xaml.cs" relfile="app/algorandapp/AtomicTransfers.xaml.cs" line="73" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/AtomicTransfers.xaml.cs" relfile="app/algorandapp/AtomicTransfers.xaml.cs" line="93" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/AtomicTransfers.xaml.cs" relfile="app/algorandapp/AtomicTransfers.xaml.cs" line="98" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/helper.cs" relfile="app/algorandapp/helper.cs" line="169" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/NodeAndNetwork.xaml.cs" relfile="app/algorandapp/NodeAndNetwork.xaml.cs" line="187" column="1" />
-      <Breakpoint file="/Users/algorand/Documents/GitHub/rfustino/xamarin-ios-android-uwp/app/algorandapp/Rekey.xaml.cs" relfile="app/algorandapp/Rekey.xaml.cs" line="28" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASC.xaml.cs" relfile="app/algorandapp/ASC.xaml.cs" line="76" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASC.xaml.cs" relfile="app/algorandapp/ASC.xaml.cs" line="92" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="660" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="668" column="2" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="802" column="2" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="272" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="283" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="304" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASC.xaml.cs" relfile="app/algorandapp/ASC.xaml.cs" line="147" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/helper.cs" relfile="app/algorandapp/helper.cs" line="169" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Rekey.xaml.cs" relfile="app/algorandapp/Rekey.xaml.cs" line="28" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="579" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="364" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="705" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Accounts.xaml.cs" relfile="app/algorandapp/Accounts.xaml.cs" line="840" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="290" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="420" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="687" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="488" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="555" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/ASA.xaml.cs" relfile="app/algorandapp/ASA.xaml.cs" line="619" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/AtomicTransfers.xaml.cs" relfile="app/algorandapp/AtomicTransfers.xaml.cs" line="84" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/CompileTeal.xaml.cs" relfile="app/algorandapp/CompileTeal.xaml.cs" line="45" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/DryrunDebugging.xaml.cs" relfile="app/algorandapp/DryrunDebugging.xaml.cs" line="68" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/MainPage.xaml.cs" relfile="app/algorandapp/MainPage.xaml.cs" line="203" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/DryrunDebugging.xaml.cs" relfile="app/algorandapp/DryrunDebugging.xaml.cs" line="41" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Indexer.xaml.cs" relfile="app/algorandapp/Indexer.xaml.cs" line="31" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Indexer.xaml.cs" relfile="app/algorandapp/Indexer.xaml.cs" line="38" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Rekey.xaml.cs" relfile="app/algorandapp/Rekey.xaml.cs" line="60" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Rekey.xaml.cs" relfile="app/algorandapp/Rekey.xaml.cs" line="59" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/Rekey.xaml.cs" relfile="app/algorandapp/Rekey.xaml.cs" line="92" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="88" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="94" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="169" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="189" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="212" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="234" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="254" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="274" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="296" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="327" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="345" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="82" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="66" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="76" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="70" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="35" column="1" />
+      <Breakpoint file="/Users/algorand/Documents/GitHub/xamarin-ios-android-uwp/app/algorandapp/StatefulContracts.xaml.cs" relfile="app/algorandapp/StatefulContracts.xaml.cs" line="146" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
