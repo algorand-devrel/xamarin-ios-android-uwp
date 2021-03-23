@@ -4,9 +4,10 @@
              x:Class="algorandapp.CompileTeal">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Compile Teal" Clicked="CompileTeal_Clicked"></Button>
+             <ScrollView>
+                  <WebView x:Name="myWebView" HeightRequest="1000" ></WebView>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

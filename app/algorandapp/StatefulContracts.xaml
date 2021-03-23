@@ -4,17 +4,17 @@
              x:Class="algorandapp.StatefulContracts">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Create App" Clicked="CreateApp_Clicked"></Button>
-            <Button x:Name="OptInBtn" Text="Opt-In" Clicked="OptIn_Clicked" IsEnabled="False"></Button>
-            <Button x:Name="CallAppBtn" Text="Call App" Clicked="CallApp_Clicked" IsEnabled="False"></Button>
-            <Button x:Name="ReadLocalStateBtn" Text="Read Local State" Clicked="ReadLocalState_Clicked" IsEnabled="False"></Button>
-            <Button x:Name="ReadGlobalStateBtn" Text="Read Global State" Clicked="ReadGlobalState_Clicked" IsEnabled="False"></Button>
-            <Button x:Name="UpdateAppBtn" Text="Update App" Clicked="UpdateApp_Clicked" IsEnabled="False"></Button>
-            <Button x:Name="CallUpdatedAppBtn" Text="Call Updated App" Clicked="CallUpdatedApp_Clicked" IsEnabled="False"></Button>
-            <Button x:Name="ReadLocalStateAgainBtn"    Text="Read Local State Again" Clicked="ReadLocalState_Clicked" IsEnabled="False"></Button>
-            <Button x:Name="CloseOutAppBtn"    Text="Close Out App" Clicked="CloseOutApp_Clicked" IsEnabled="False"></Button>
-            <Button x:Name="ClearAppCtn"    Text="Clerar App" Clicked="ClearApp_Clicked" IsEnabled="False" IsVisible="false"></Button>
-            <Button x:Name="DeleteAppBtn"    Text="Delete App" Clicked="DeleteApp_Clicked" IsEnabled="False" IsVisible="false"></Button>
+            <Button Text="Create App" FontSize="Large" Clicked="CreateApp_Clicked"></Button>
+            <Button x:Name="OptInBtn" FontSize="Large"  Text="Opt-In" Clicked="OptIn_Clicked" IsEnabled="False"></Button>
+            <Button x:Name="CallAppBtn" FontSize="Large" Text="Call App" Clicked="CallApp_Clicked" IsEnabled="False"></Button>
+            <Button x:Name="ReadLocalStateBtn" FontSize="Large"  Text="Read Local State" Clicked="ReadLocalState_Clicked" IsEnabled="False"></Button>
+            <Button x:Name="ReadGlobalStateBtn" FontSize="Large"  Text="Read Global State" Clicked="ReadGlobalState_Clicked" IsEnabled="False"></Button>
+            <Button x:Name="UpdateAppBtn" FontSize="Large"  Text="Update App" Clicked="UpdateApp_Clicked" IsEnabled="False"></Button>
+            <Button x:Name="CallUpdatedAppBtn" FontSize="Large"  Text="Call Updated App" Clicked="CallUpdatedApp_Clicked" IsEnabled="False"></Button>
+            <Button x:Name="ReadLocalStateAgainBtn"  FontSize="Large"   Text="Read Local State Again" Clicked="ReadLocalState_Clicked" IsEnabled="False"></Button>
+            <Button x:Name="CloseOutAppBtn"  FontSize="Large"   Text="Close Out App" Clicked="CloseOutApp_Clicked" IsEnabled="False"></Button>
+            <Button x:Name="ClearAppCtn"   FontSize="Large"  Text="Clerar App" Clicked="ClearApp_Clicked" IsEnabled="False" IsVisible="false"></Button>
+            <Button x:Name="DeleteAppBtn"  FontSize="Large"   Text="Delete App" Clicked="DeleteApp_Clicked" IsEnabled="False" IsVisible="false"></Button>
             <ScrollView>
                   <WebView x:Name="myWebView" HeightRequest="1000" ></WebView>
             </ScrollView>

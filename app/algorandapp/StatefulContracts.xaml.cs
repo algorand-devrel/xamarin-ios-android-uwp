@@ -24,15 +24,14 @@ namespace algorandapp
         CompileResponse clearProgram;
         CompileResponse approvalProgramRefactored;
         static helper helper = new helper();
+        AlgodApi client;
+        //Account account1;
+        //Account account2;   
+        long? appid = 0;
 
+        string network = "";
         Account creator;
         Account user;
-        AlgodApi client;
-        long? appid = 0;
-        Account account1;
-        Account account2;
-        string network = "";
-        
 
 
         public StatefulContracts()
@@ -90,88 +89,7 @@ namespace algorandapp
         //    //client = new AlgodApi(ALGOD_API_ADDR, ALGOD_API_TOKEN);
 
 
-        //    //var transParams = client.TransactionParams();
-        //    //var tx = Utils.GetPaymentTransaction(admin.Address, creator.Address, 
-        //    //    Utils.AlgosToMicroalgos(1), null, transParams);
-        //    //var resp = Utils.SubmitTransaction(client, admin.SignTransaction(tx));
-        //    //var waitResp = Utils.WaitTransactionToComplete(client, resp.TxId);
-        //    //Console.WriteLine(string.Format("send 1 algo to account {0} at round {1}",
-        //    //    creator.Address.ToString(), waitResp.ConfirmedRound));
-
-        //    //tx = Utils.GetPaymentTransaction(admin.Address, user.Address,
-        //    //    Utils.AlgosToMicroalgos(1), null, transParams);
-        //    //resp = Utils.SubmitTransaction(client, admin.SignTransaction(tx));
-        //    //waitResp = Utils.WaitTransactionToComplete(client, resp.TxId);
-        //    //Console.WriteLine(string.Format("send 1 algo to account {0} at round {1}",
-        //    //    user.Address.ToString(), waitResp.ConfirmedRound));
-
-        //    // declare application state storage (immutable)
-        //    ////ulong localInts = 1;
-        //    ////ulong localBytes = 1;
-        //    ////ulong globalInts = 1;
-        //    ////ulong globalBytes = 0;
-
-        //    // user declared approval program (initial)
-        //    //  string approvalProgramSourceInitial = File.ReadAllText("V2/contract/stateful_approval_init.teal");
-        //    //compileTealPrograms();
-
-        //    try
-        //    {
-        //        // create new application
-        //        //// appid = CreateApp(client, creator, new TEALProgram(approvalProgram.Result),
-        //        ////    new TEALProgram(clearProgram.Result), globalInts, globalBytes, localInts, localBytes);
-
-        //        // opt-in to application
-        //        ////OptIn(client, user, appid);
-        //        // call application without arguments
-        //        ////CallApp(client, user, appid, null);
-        //        // read local state of application from user account
-        //        //// ReadLocalState(client, user, appid);
-
-        //        // read global state of application
-        //        ////ReadGlobalState(client, creator, appid);
-
-        //        // update application
-        //        ////UpdateApp(client, creator, appid,
-        //        ////    new TEALProgram(approvalProgramRefactored.Result),
-        //        ////   new TEALProgram(clearProgram.Result));
-        //        //// call application with arguments
-        //        ////var date = DateTime.Now;
-        //        ////Console.WriteLine(date.ToString("yyyy-MM-dd 'at' HH:mm:ss"));
-        //        ////List<byte[]> appArgs = new List<byte[]>
-        //        ////{
-        //        ////    Encoding.UTF8.GetBytes(date.ToString("yyyy-MM-dd 'at' HH:mm:ss"))
-        //        ////};
-        //        ////CallApp(client, user, appid, appArgs);
-
-        //        // read local state of application from user account
-        //        ////ReadLocalState(client, user, appid);
-
-        //        // close-out from application
-        //        ////CloseOutApp(client, user, (ulong)appid);
-
-        //        // opt-in again to application
-        //        //  OptIn(client, user, appid);
-
-        //        // call application with arguments
-        //        //  CallApp(client, user, appid, appArgs);
-
-        //        // read local state of application from user account
-        //        //   ReadLocalState(client, user, appid);
-
-        //        // delete application
-        //        ////DeleteApp(client, creator, appid);
-
-        //        // clear application from user account
-        //        ////ClearApp(client, user, appid);
-
-        //        //Console.WriteLine("You have successefully arrived the end of this test, please press and key to exist.");
-        //    }
-        //    catch (ApiException e)
-        //    {
-        //        // This is generally expected, but should give us an informative error message.
-        //        Console.WriteLine("Exception when calling algod#sendTransaction: " + e.Message);
-        //    }
+ 
 
         //}
 
@@ -242,8 +160,8 @@ namespace algorandapp
        void DisplayInfo(string text)
             {
                 var htmlSource = new HtmlWebViewSource();
-                htmlSource.Html = @"<html><body><h3>" + 
-                    "<h3>" + text + "</h3></body></html>";
+                htmlSource.Html = @"<html><body><h2>" + 
+                     text + "</h2></body></html>";
                 myWebView.Source = htmlSource;
 
             }
