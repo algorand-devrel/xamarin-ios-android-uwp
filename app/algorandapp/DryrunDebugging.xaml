@@ -4,9 +4,10 @@
              x:Class="algorandapp.DryrunDebugging">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Dryrun Debugging" FontSize="Large"  Clicked="DryrunDebugging_Clicked"></Button>
+             <ScrollView>
+                  <WebView x:Name="myWebView" HeightRequest="1000" ></WebView>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
