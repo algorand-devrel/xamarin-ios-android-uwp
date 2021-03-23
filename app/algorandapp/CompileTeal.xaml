@@ -4,7 +4,7 @@
              x:Class="algorandapp.CompileTeal">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Compile Teal" Clicked="CompileTeal_Clicked"></Button>
+            <Button Text="Compile Teal" FontSize="Large"  Clicked="CompileTeal_Clicked"></Button>
              <ScrollView>
                   <WebView x:Name="myWebView" HeightRequest="1000" ></WebView>
             </ScrollView>

@@ -4,9 +4,13 @@
              x:Class="algorandapp.Rekey">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="OptinBtn" Text="Acct3 Opts In - Acct1 to sign" FontSize="Large" Clicked="Optin_Clicked"></Button>
+            <Button x:Name="AccountSign" FontSize="Large"  Text="Acct1 Signs - Acct3 Sends" IsEnabled="False" Clicked="AccountSign_Clicked"></Button>
+            <Button x:Name="ResetBack" FontSize="Large"  Text="Account Reset" IsEnabled="True" Clicked="ResetBack_Clicked"></Button>
+
+            <ScrollView>
+                  <WebView x:Name="myWebView" HeightRequest="1000" ></WebView>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
