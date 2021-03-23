@@ -1,8 +1,8 @@
-/XamarinApp/algroandapp/bin
-/XamarinApp/algroandapp/obj
-/XamarinApp/algroandapp.Android/obj
-/XamarinApp/algorandapp.Android/bin
-/XamarinApp/algroandapp.iOS/bin
-/XamarinApp/algroandapp.iOS/obj
-/XamarinApp/algroandapp.UWP/obj
-/XamarinApp/algroandapp.UWP/bin
+app/algorandapp/bin
+app/algorandapp/obj
+app/algorandapp.Android/obj
+app/algorandapp.Android/bin
+app/algorandapp.iOS/bin
+app/algorandapp.iOS/obj
+algorandapp.UWP/obj
+algorandapp.UWP/bin
